@@ -1,0 +1,31 @@
+#return-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: $primary;
+  width: 50px;
+  height: 50px;
+  display: none;
+  border-radius: 35px;
+  transition: all 0.3s ease;
+  z-index: 99;
+  &:hover {
+    background-color: $white;
+    border: 2px solid $primary;
+    i {
+      top: 0px;
+      color: $primary;
+    }
+  }
+  i {
+    color: $white;
+    margin: 0;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 8px;
+    font-size: 30px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+}

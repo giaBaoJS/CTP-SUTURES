@@ -1,0 +1,116 @@
+.footer {
+  &__top {
+    background-color: $primary2;
+    color: $white;
+    padding: 50px 0;
+    .row {
+      align-items: center;
+      .left {
+        width: calc(100% - 300px);
+      }
+      .right {
+        width: 300px;
+      }
+    }
+    .content {
+      &__title {
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 1.33;
+        text-transform: uppercase;
+        strong {
+          font-weight: bold;
+        }
+      }
+      &__danhmuc {
+        width: 100%;
+        background-color: $primary;
+        padding: 14px 15px;
+        display: inline-block;
+        color: $white;
+        font-size: 12px;
+        line-height: 1.33;
+        font-weight: bold;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        i {
+          font-size: 14px;
+          color: $primary2;
+        }
+      }
+    }
+  }
+  &__bottom {
+    background-color: #15223a;
+    padding-top: 74px;
+    padding-bottom: 48px;
+    color: $white;
+    a {
+      color: $white;
+    }
+    .row {
+      .col-3 {
+        width: 30%;
+      }
+      .col-6 {
+        width: 40%;
+      }
+    }
+    .content {
+      .logo-bot {
+        width: 100px;
+        height: auto;
+        margin-bottom: 7.5px;
+      }
+      .iso-bot {
+        width: 130px;
+        height: auto;
+      }
+      p {
+        font-weight: 300;
+        margin-bottom: 7px;
+      }
+      span {
+        font-size: 10px;
+        font-weight: bold;
+        line-height: 1.4;
+        opacity: 0.4;
+        text-transform: uppercase;
+      }
+      &.--middle {
+        display: flex;
+      }
+      &__left {
+        padding-right: 70px;
+      }
+      &__right {
+        ul {
+          column-count: 2;
+          column-gap: 30px;
+          li {
+            a {
+              line-height: 2.5;
+              text-transform: uppercase;
+              white-space: nowrap;
+              &:hover {
+                color: #4fcafc;
+              }
+            }
+            &.active {
+              a {
+                color: #4fcafc;
+                font-weight: bold;
+              }
+            }
+          }
+        }
+      }
+      &__title{
+          text-transform: uppercase;
+          font-weight: bold;
+      }
+    }
+  }
+}

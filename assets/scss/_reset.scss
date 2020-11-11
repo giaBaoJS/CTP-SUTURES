@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  font-family: 'SF Pro Text','sans-serif';
+  font-size: 14px;
+  line-height: 1.7;
+}
+a {
+  text-decoration: none;
+  color: $black;
+  transition: 0.3s all;
+
+}
+ol,
+ul {
+  list-style: none;
+}
+input:focus,textarea:focus,
+button {
+  outline: none;
+}
+input,
+label,
+select,
+button,
+textarea {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  font-family: inherit;
+  vertical-align: middle;
+  white-space: normal;
+  background: none;
+  line-height: 1;
+  font-size: inherit;
+  font-family: inherit;
+}
+button{
+  cursor: pointer;
+}

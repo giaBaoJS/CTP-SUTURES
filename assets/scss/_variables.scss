@@ -1,0 +1,14 @@
+$primary: #105BAA;
+$primary2:#1886EB;
+$white: #ffffff;
+$black: #000000;
+@mixin media($point) {
+	@media screen and (max-width: $point) {
+		@content;
+	}
+}
+@mixin min-media($point) {
+    @media screen and (min-width: $point) {
+        @content;
+    }
+}
