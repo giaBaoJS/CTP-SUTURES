@@ -122,6 +122,11 @@
   height: auto;
   object-fit: cover;
 }
+.img-fluid{
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
 //Spacing padding
 .spacing {
   padding-top: 50px;
@@ -137,8 +142,108 @@
 
 //title common
 .title-cm {
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 1.32;
+  text-transform: uppercase;
+  @include media(540px) {
+    font-size: 30px;
+  }
 }
 
 //title-main
 .title-main {
+}
+
+//Form search
+.form-search{
+  &__title {
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 2.1;
+    margin-bottom: 9px;
+  }
+  .form {
+    position: relative;
+    margin-bottom: 11px;
+    input {
+      padding: 13px 41px;
+      font-size: 12px;
+      background-color: #2d394e;
+      color: $white;
+      width: 100%;
+      &::placeholder {
+        color: #6c7483;
+        font-size: 12px;
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 1.33;
+      }
+    }
+    button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 15px;
+      font-size: 18px;
+      color: #4fcafc;
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+}
+
+//Hero Banner
+.banner-hero {
+  padding: 110px 0;
+  color: $white;
+  &__title {
+    font-size: 60px;
+    line-height: 1.33;
+  }
+}
+
+//Breadcums
+.breadcums {
+  background-color: #e7f3fd;
+  padding: 13px 0;
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    li {
+      text-transform: uppercase;
+      line-height: 1.4;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 11px;
+      a {
+        color: #8a9298;
+      }
+      &:hover {
+        a {
+          color: $primary2;
+        }
+      }
+      &.active {
+        a {
+          color: $black;
+        }
+        &::before {
+          background-color: $primary2;
+        }
+      }
+      &::before {
+        content: '';
+        margin-right: 15px;
+        display: block;
+        width: 8px;
+        height: 8px;
+        background-color: #8b9298;
+        border-radius: 100%;
+      }
+    }
+  }
 }

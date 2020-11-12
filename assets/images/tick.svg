@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <g id="tick" transform="translate(-14 34)">
+    <g id="Group_36" data-name="Group 36" transform="translate(14 -34)">
+      <path id="Path_22" data-name="Path 22" d="M20,0A20,20,0,1,0,40,20,20.045,20.045,0,0,0,20,0Zm-.9,27.34a2.286,2.286,0,0,1-1.489.585,2.1,2.1,0,0,1-1.489-.638L8.3,19.468l3.032-3.032,6.33,6.33L28.723,12.234l2.926,3.085Z" fill="#fff"/>
+    </g>
+  </g>
+</svg>

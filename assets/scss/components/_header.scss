@@ -1,6 +1,7 @@
 .header {
-  background: #fff;
   position: relative;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.16);
+  z-index: 99;
   &-fixed {
     .header__menu {
       position: fixed;
@@ -8,7 +9,6 @@
       top: 0;
       left: 0;
       z-index: 99;
-      box-shadow: 1px 5px 16px rgba(0, 0, 0, 0.2);
       animation: 0.6s fixedMenu;
       @keyframes fixedMenu {
         0% {
@@ -27,38 +27,46 @@
     }
   }
   &__topbar {
-    padding: 12px 0;
-    font-size: 12px;
-    border-bottom: 1px solid #ececec;
-
+    background-color: #f8f8f8;
+    padding: 10px 0;
     .row {
       justify-content: space-between;
+      align-items: center;
     }
     &-left {
-      .content {
-        b {
-          color: $primary;
-          font-weight: normal;
+      p {
+        font-size: 12px;
+        line-height: 1.33;
+        span {
+          font-weight: bold;
         }
       }
     }
     &-right {
-      .content {
+      @include media(540px) {
+        display: none;
+      }
+      ul {
         display: flex;
         li {
-          padding: 5px;
-          line-height: 1.33;
+          margin-right: 10px;
           a {
-            transition: 0.3s all;
-            &:hover {
-              color: $primary;
+            display: inherit;
+            width: 25px;
+            height: 25px;
+            line-height: 25px;
+            text-align: center;
+            border: 1px solid #747474;
+            border-radius: 100%;
+            i {
+              color: #747474;
             }
-          }
-        }
-        @include media(540px) {
-          li {
-            &:not(:last-child) {
-              display: none;
+            &:hover {
+              background-color: $primary;
+              border: 1px solid $primary;
+              i {
+                color: $white;
+              }
             }
           }
         }
@@ -66,7 +74,8 @@
     }
   }
   &__menu {
-    background-color: $primary;
+    background-color: $white;
+    box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.16);
     .main-header {
       position: relative;
       .isner {
@@ -74,174 +83,10 @@
         align-items: center;
         justify-content: space-between;
         position: relative;
-        .main-danhmuc {
-          color: $white;
-          .wrap {
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            padding: 15px;
-            background-color: #00994c;
-            img {
-              width: 14px;
-              height: 14px;
-              margin-right: 5px;
-            }
-            p {
-              text-transform: uppercase;
-              font-weight: bold;
-            }
-          }
-          .danhmuc__menu {
-            @include media(1200px) {
-              position: fixed;
-              top: 0;
-              right: 100vw;
-              width: 100%;
-              height: 100%;
-              border-radius: 0;
-              -webkit-transform: translate(0, 0);
-              text-align: left;
-              -webkit-transition: 0.5s;
-              transition: 0.5s;
-              z-index: 998;
-              display: unset;
-            }
-            &.active {
-              display: block;
-              @include media(1200px) {
-                right: 0;
-              }
-            }
-            &.is-home {
-              display: block;
-            }
-            display: none;
-            position: absolute;
-            z-index: 99;
-            padding: 0px 15px 11px 15px;
-            background-color: #f8f8f8;
-            box-shadow: 1px 5px 16px rgba(0, 0, 0, 0.2);
-            ul {
-              position: relative;
-              @include media(1200px) {
-                padding-top: 30px;
-              }
-              li {
-                position: relative;
-                padding: 10px 0;
-                border-bottom: 1px solid #ececec;
-                a {
-                  transition: 0.2s all;
-                  margin-left: 13px;
-                  &:hover {
-                    color: $primary;
-                  }
-                  &::before {
-                    content: '\f0da';
-                    font-family: FontAweSome;
-                    position: absolute;
-                    top: 12px;
-                    left: 0;
-                    color: $primary;
-                  }
-                }
-                .submenu {
-                  transition: 0.2s all;
-                  opacity: 0;
-                  visibility: hidden;
-                  top: 0;
-                  position: absolute;
-                  left: 175px;
-                  width: 100%;
-                  @include media(1200px) {
-                    position: static;
-                    padding-top: 0;
-                    visibility: visible;
-                    opacity: 1;
-                    display: none;
-                  }
-                  li {
-                    background-color: #f8f8f8;
-                    padding: 10px;
-                    &:last-child {
-                      border-bottom: none;
-                    }
-                    @include media(1200px) {
-                      padding: 10px 20px;
-                    }
-                    &::before {
-                      content: none;
-                    }
-                    a {
-                      margin-left: 0;
-                      padding-left: 13px;
-                      position: relative;
-                      &::before {
-                        content: '';
-                        position: absolute;
-                        top: 50%;
-                        transform: translateY(-50%);
-                        left: 0;
-                        width: 0;
-                        height: 0;
-                        border-top: 5px solid transparent;
-                        border-bottom: 5px solid transparent;
-                        border-left: 5px solid $primary;
-                      }
-                    }
-                  }
-                }
-                &:hover {
-                  .submenu {
-                    opacity: 1;
-                    visibility: visible;
-                  }
-                }
-                &.dropdown {
-                  &.--show {
-                    display: block;
-                  }
-                  a {
-                    display: flex;
-                    align-items: center;
-                    @include media(1200px) {
-                      justify-content: space-between;
-                    }
-                  }
-                  i {
-                    transition: 0.3s all;
-                    font-weight: bold;
-                    width: 30px;
-                    height: 20px;
-                    font-weight: bold;
-                    display: flex;
-                    justify-content: center;
-                    align-items: flex-end;
-                    @include min-media(1200px) {
-                      pointer-events: none;
-                    }
-                    &.--active {
-                      -webkit-transform: rotate(180deg);
-                      transform: rotate(180deg);
-                    }
-                  }
-                }
-              }
-            }
-            .icon-x {
-              z-index: 20;
-              display: none;
-              color: black;
-              text-align: right;
-              position: absolute;
-              right: 20px;
-              top: 10px;
-              font-size: 25px;
-              @include media(1200px) {
-                display: block;
-              }
-            }
+        .main-logo {
+          img {
+            width: 130px;
+            height: auto;
           }
         }
         .main-menu-btn {
@@ -279,7 +124,7 @@
             left: 50%;
             -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
-            background-color: $white;
+            background-color: $primary;
             -webkit-transition: 0.3s;
             transition: 0.3s;
             border-radius: 2px;
@@ -290,7 +135,7 @@
               left: 0;
               width: 30px;
               height: 3px;
-              background-color: $white;
+              background-color: $primary;
               -webkit-transition: 0.3s;
               transition: 0.3s;
               border-radius: 2px;
@@ -302,7 +147,7 @@
               left: 0;
               width: 30px;
               height: 3px;
-              background-color: $white;
+              background-color: $primary;
               -webkit-transition: 0.3s;
               transition: 0.3s;
               border-radius: 2px;
@@ -341,7 +186,7 @@
                 z-index: 2;
                 padding: 20px 0 50px;
                 border-radius: 0;
-                background: $primary;
+                background: $white;
               }
               display: flex;
               align-items: center;
@@ -350,18 +195,15 @@
               li {
                 position: relative;
                 a {
-                  padding: 15px 20px;
-                  display: block;
-                  color: $white;
+                  padding: 30px 15px;
+                  display: inline-block;
                   position: relative;
-                  transition: 0.2s all;
-                  font-size: 18px;
                   line-height: 1.33;
                   font-weight: bold;
                   display: flex;
                   justify-content: center;
                   align-items: center;
-                  letter-spacing: 1.31px;
+                  text-transform: uppercase;
                   i {
                     @include min-media(1200px) {
                       pointer-events: none;
@@ -373,16 +215,16 @@
                     font-weight: bold;
                     display: flex;
                     justify-content: center;
-                    align-items: flex-end;
+                    align-items: center;
                     &.--active {
                       -webkit-transform: rotate(180deg);
                       transform: rotate(180deg);
                     }
                   }
                   @include media(1200px) {
-                    color: $white;
+                    color: $primary;
                     padding: 12px 14px;
-                    border-bottom: 1px dashed #f1f1f1;
+                    border-bottom: 1px dashed $primary;
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
@@ -391,7 +233,7 @@
                 &.current-menu-item,
                 &:hover {
                   & > a {
-                    color: #fed85c;
+                    color: $primary;
                     border-bottom: none;
                   }
                   &.dropdown {
@@ -401,9 +243,60 @@
                   }
 
                   @include media(1200px) {
+                    background-color: $primary;
+                    a {
+                      color: $white;
+                    }
+                  }
+                }
+                .submenu {
+                  z-index: 10;
+                  position: absolute;
+                  width: max-content;
+                  top: 100%;
+                  left: 0;
+                  @include min-media(1200px) {
+                    border-top: 4px solid $primary;
+                    margin-top: -4px;
+                    display: block;
+                    pointer-events: none;
+                    -webkit-transition: 0.3s;
+                    transition: 0.3s;
+                    -webkit-transform: translateY(10px);
+                    transform: translateY(10px);
+                    opacity: 0;
+                    visibility: hidden;
+                  }
+                  li {
+                    padding: 0 10px;
                     background-color: $white;
                     a {
-                      color: $primary;
+                      color: $black;
+                      padding: 15px;
+                      padding-right: 30px;
+                      border-bottom: 1px solid #e2e2e2;
+                      justify-content: flex-start;
+                    }
+                    &:hover {
+                      background-color: $primary2;
+                      a {
+                        color: $white;
+                      }
+                    }
+                  }
+                  @include media(1200px) {
+                    display: none;
+                    position: relative;
+                    width: 100%;
+                    li {
+                      background-color: $primary;
+                      border-bottom: 1px dashed $white;
+                      width: 100%;
+                      a {
+                        padding: 5px 15px 5px 25px;
+                        color: $white;
+                        border-bottom: none;
+                      }
                     }
                   }
                 }
@@ -415,47 +308,6 @@
                       pointer-events: auto;
                       -webkit-transform: translateY(0);
                       transform: translateY(0);
-                    }
-                  }
-                }
-                .submenu {
-                  z-index: 10;
-                  position: absolute;
-                  width: max-content;
-                  top: 100%;
-                  left: 0;
-                  @include min-media(1200px) {
-                    display: block;
-                    pointer-events: none;
-                    -webkit-transition: 0.3s;
-                    transition: 0.3s;
-                    -webkit-transform: translateY(10px);
-                    transform: translateY(10px);
-                    opacity: 0;
-                    visibility: hidden;
-                  }
-                  li {
-                    padding: 5px 0;
-                    background-color: #e8e8e8;
-                    a {
-                      color: $black;
-                      &:hover {
-                        color: #fed85c;
-                      }
-                    }
-                  }
-                  @include media(1200px) {
-                    display: none;
-                    position: relative;
-                    width: 100%;
-                    li {
-                      background-color: $primary;
-                      border-bottom: 1px dashed $white;
-                      a {
-                        padding: 5px 15px 5px 25px;
-                        color: $white;
-                        border-bottom: none;
-                      }
                     }
                   }
                 }
@@ -479,10 +331,11 @@
               width: 250px;
               position: relative;
               z-index: 10;
-              background-color: #00a551;
-              padding: 10px 0;
+              background-color: $white;
+              padding: 30px 0;
+              border-bottom: 1px solid $primary;
               img {
-                width: 100px;
+                width: 130px;
                 height: auto;
               }
               @include media(1200px) {

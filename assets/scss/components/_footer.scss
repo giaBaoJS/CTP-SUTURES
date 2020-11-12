@@ -11,6 +11,12 @@
       .right {
         width: 300px;
       }
+      @include media(540px) {
+        .left {
+          width: 100%;
+          margin-bottom: 20px;
+        }
+      }
     }
     .content {
       &__title {
@@ -20,6 +26,9 @@
         text-transform: uppercase;
         strong {
           font-weight: bold;
+        }
+        @include media(540px) {
+          font-size: 21px;
         }
       }
       &__danhmuc {
@@ -35,9 +44,15 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        border: 1px solid transparent;
         i {
           font-size: 14px;
           color: $primary2;
+        }
+        &:hover {
+          background-color: $white;
+          color: $primary;
+          border-color: $primary;
         }
       }
     }
@@ -47,15 +62,21 @@
     padding-top: 74px;
     padding-bottom: 48px;
     color: $white;
+    @include media(1023px) {
+      padding-top: 48px;
+    }
     a {
       color: $white;
     }
     .row {
       .col-3 {
-        width: 30%;
-      }
-      .col-6 {
-        width: 40%;
+        width: calc(100% / 12 * 4);
+        @include media(1023px) {
+          width: 100%;
+          &:not(:last-child) {
+            margin-bottom: 20px;
+          }
+        }
       }
     }
     .content {
@@ -79,13 +100,25 @@
         opacity: 0.4;
         text-transform: uppercase;
       }
-      &.--middle {
+      &.--top {
         display: flex;
+        justify-content: space-between;
+        @include media(1023px) {
+          flex-direction: column;
+        }
+      }
+      &.--middle {
+        padding-left: 50px;
+        @include media(1023px) {
+          padding-left: 0;
+        }
       }
       &__left {
-        padding-right: 70px;
+        @include media(1023px) {
+          margin-bottom: 20px;
+        }
       }
-      &__right {
+      &__list {
         ul {
           column-count: 2;
           column-gap: 30px;
@@ -93,7 +126,6 @@
             a {
               line-height: 2.5;
               text-transform: uppercase;
-              white-space: nowrap;
               &:hover {
                 color: #4fcafc;
               }
@@ -106,11 +138,8 @@
             }
           }
         }
-      }
-      &__title{
-          text-transform: uppercase;
-          font-weight: bold;
-      }
+      } 
     }
+
   }
 }

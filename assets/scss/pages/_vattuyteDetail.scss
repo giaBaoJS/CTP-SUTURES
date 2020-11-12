@@ -1,0 +1,36 @@
+.wrapper-vattuyte-detail {
+  .yte-detail {
+    padding: 90px 0;
+    &__top {
+      .title-cm {
+        color: $primary;
+      }
+      padding-bottom: 35px;
+      border-bottom: 1px solid #e5e5e5;
+    }
+    &__list {
+      padding: 40px 0;
+      .row {
+        .column {
+          width: 20%;
+        }
+      }
+      .items {
+        img {
+          width: 70px;
+          height: auto;
+          margin-bottom: 8px;
+        }
+        .title {
+          font-size: 14px;
+          line-height: 1.4;
+          font-weight: bold;
+          margin-bottom: 7px;
+        }
+        p {
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}

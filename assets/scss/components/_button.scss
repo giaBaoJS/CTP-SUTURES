@@ -29,3 +29,16 @@
     transition: all 0.3s ease;
   }
 }
+
+//Button main
+.btn-main{
+  padding: 13px 20px;
+  font-size: 12px;
+  line-height: 1.33;
+  text-transform: uppercase;
+  display: inline-flex;
+  justify-content: space-between;
+  border: 1px solid $primary2;
+  letter-spacing: 0.3px;
+  font-weight: bold;
+}
