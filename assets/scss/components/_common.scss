@@ -237,3 +237,147 @@
     }
   }
 }
+
+//Spacing
+.spacing{
+  padding: 80px 0;
+  @include media(540px){
+    padding: 60px 0;
+  }
+}
+
+//Danh muc Aside
+.danhmuc-main {
+  padding: 13px 3px 3px 3px;
+  background-color: $primary;
+  border-radius: 12px;
+  &__title {
+    color: $white;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-size: 16px;
+    text-align: center;
+  }
+  &__inner {
+    background-color: $white;
+    border-radius: 12px;
+    box-shadow: 6px 6px 16px 0 rgba(0, 0, 0, 0.1);
+    ul {
+      .items {
+        font-weight: bold;
+        &:first-child {
+          border-top-left-radius: 12px;
+          border-top-right-radius: 12px;
+        }
+        &:last-child {
+          border-bottom-left-radius: 12px;
+          border-bottom-right-radius: 12px;
+        }
+        cursor: pointer;
+        padding: 20px 12px;
+        text-align: center;
+        border-bottom: 1px solid #e2e2e2;
+        &:last-child {
+          border-bottom: none;
+        }
+        &__title {
+          font-size: 18px;
+          display: block;
+          line-height: 1.1;
+        }
+        &__subtitle {
+          font-size: 12px;
+          display: block;
+          line-height: 1.6;
+
+          color: #a2a2a2;
+        }
+        &.active {
+          box-shadow: 6px 6px 16px 0 rgba(0, 0, 0, 0.16);
+          background-image: linear-gradient(to right, #1886eb, #4fcafc);
+          .items__title {
+            color: $white;
+          }
+          .items__subtitle {
+            color: #93ccf7;
+          }
+        }
+      }
+    }
+  }
+}
+
+//Medicine items
+.medicine {
+  border-radius: 10px;
+  border: solid 1px #e5e5e5;
+  transition: 0.3s all;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  &__top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 15px 35px;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__mid {
+    height: 100%;
+    padding: 15px;
+    background-color: transparent;
+    a {
+      color: $white;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+  &__bot {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 15px;
+    background-color: #f8f8f8;
+  }
+  &:hover {
+    box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.1);
+  }
+}
+.info__list__main {
+  position: relative;
+  z-index: 10;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #cccccc;
+  .row {
+    .col-4 {
+      width: calc(100% / 12 * 4);
+      margin-bottom: 30px;
+      @include media(540px) {
+        width: 100%;
+      }
+    }
+  }
+}
+//nav-cm
+.nav-cm {
+  li {
+    position: relative;
+    padding-left: 20px;
+    font-size: 16px;
+    line-height: 1.875;
+    span {
+      font-weight: bold;
+      color: $primary2;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      top: 12px;
+      left: 0;
+      width: 6px;
+      height: 6px;
+      background-color: $primary2;
+    }
+  }
+}

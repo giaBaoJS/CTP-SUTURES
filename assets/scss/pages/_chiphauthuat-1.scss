@@ -1,0 +1,77 @@
+.wrapper-chiphauthuat-1 {
+  .chiphauthuat-1__detail {
+    overflow: hidden;
+    .row {
+      .col-3 {
+        width: 25%;
+      }
+      .col-9 {
+        width: 75%;
+      }
+      @include media(1023px) {
+        .col-3,
+        .col-9 {
+          width: 100%;
+        }
+        .col-3 {
+          margin-bottom: 50px;
+        }
+      }
+    }
+
+    .wrap__information {
+      position: relative;
+      .image-ol {
+        position: absolute;
+        top: -104px;
+        right: -152px;
+        @include media(1023px) {
+          display: none;
+        }
+      }
+      .info__top {
+        position: relative;
+        z-index: 10;
+        margin-bottom: 10px;
+        max-width: 600px;
+        width: 100%;
+        .title-cm {
+          margin-bottom: 25px;
+          color: $primary;
+        }
+        .description {
+          p {
+            margin-bottom: 25px;
+          }
+        }
+      }
+      .info__detail {
+        padding-top: 30px;
+        padding-bottom: 35px;
+        border-bottom: 1px solid #cccccc;
+        &:last-child {
+          border-bottom: 0;
+        }
+        .title {
+          font-size: 24px;
+          line-height: 1;
+          margin-bottom: 27px;
+          font-weight: normal;
+          color: $primary;
+        }
+        &-group {
+          margin-top: 24px;
+          strong {
+            margin-bottom: 13px;
+            font-size: 16px;
+            display: inline-block;
+          }
+
+          &:first-child {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+}

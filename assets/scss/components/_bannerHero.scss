@@ -1,6 +1,9 @@
 .banner-hero {
   padding: 110px 0;
   color: $white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   &__title {
     font-size: 60px;
     line-height: 1.33;
