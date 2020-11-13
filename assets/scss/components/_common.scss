@@ -115,6 +115,12 @@
   .mona-table-wrap {
     overflow: auto;
   }
+  &.--custom {
+    strong {
+      text-transform: uppercase;
+      color: $primary;
+    }
+  }
 }
 //Image
 .img-full {
@@ -122,7 +128,7 @@
   height: auto;
   object-fit: cover;
 }
-.img-fluid{
+.img-fluid {
   max-width: 100%;
   height: auto;
   object-fit: cover;
@@ -156,7 +162,7 @@
 }
 
 //Form search
-.form-search{
+.form-search {
   &__title {
     text-transform: uppercase;
     font-weight: bold;
@@ -239,13 +245,22 @@
 }
 
 //Spacing
-.spacing{
+.spacing {
   padding: 80px 0;
+  @include media(540px) {
+    padding: 60px 0;
+  }
+}
+//Space
+.space {
+  padding: 100px 0;
+  @include media(768px) {
+    padding: 80px 0;
+  }
   @include media(540px){
     padding: 60px 0;
   }
 }
-
 //Danh muc Aside
 .danhmuc-main {
   padding: 13px 3px 3px 3px;

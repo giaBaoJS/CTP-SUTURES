@@ -163,6 +163,24 @@ button {
 .header__topbar-right ul li a:hover i {
   color: #ffffff;
 }
+.header__topbar.--eng {
+  background-color: #1E3461;
+  color: #ffffff;
+}
+.header__topbar.--eng .header__topbar-right ul li a {
+  border-color: #ffffff;
+  color: #ffffff;
+}
+.header__topbar.--eng .header__topbar-right ul li a i {
+  color: #ffffff;
+}
+.header__topbar.--eng .header__topbar-right ul li a:hover {
+  border-color: #1E3461;
+  background-color: #ffffff;
+}
+.header__topbar.--eng .header__topbar-right ul li a:hover i {
+  color: #1E3461;
+}
 .header__menu {
   background-color: #ffffff;
   box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.16);
@@ -382,6 +400,7 @@ button {
   padding-right: 30px;
   border-bottom: 1px solid #e2e2e2;
   justify-content: flex-start;
+  font-weight: normal;
 }
 .header__menu .main-header .isner .right .main-menu-nav li .submenu li:hover {
   background-color: #1886EB;
@@ -564,6 +583,10 @@ button {
 .mona-content .mona-table-wrap {
   overflow: auto;
 }
+.mona-content.--custom strong {
+  text-transform: uppercase;
+  color: #105BAA;
+}
 
 .img-full {
   width: 100%;
@@ -680,6 +703,20 @@ button {
 }
 @media screen and (max-width: 540px) {
   .spacing {
+    padding: 60px 0;
+  }
+}
+
+.space {
+  padding: 100px 0;
+}
+@media screen and (max-width: 768px) {
+  .space {
+    padding: 80px 0;
+  }
+}
+@media screen and (max-width: 540px) {
+  .space {
     padding: 60px 0;
   }
 }
@@ -868,6 +905,9 @@ button {
 .banner-hero__title {
   font-size: 60px;
   line-height: 1.33;
+}
+.banner-hero__title span {
+  font-weight: 300;
 }
 @media screen and (max-width: 540px) {
   .banner-hero {
@@ -2148,4 +2188,34 @@ button {
 }
 .wrapper-chiphauthuat-2 .chiphauthuat-2__detail .detail__danhmuc .title {
   margin-bottom: 20px;
+}
+
+.wrapper-surgical .surgical__about {
+  background-color: #f8f8f8;
+  position: relative;
+  overflow: hidden;
+}
+.wrapper-surgical .surgical__about .title-cm {
+  margin-bottom: 30px;
+}
+.wrapper-surgical .surgical__about .description {
+  position: relative;
+  z-index: 10;
+}
+.wrapper-surgical .surgical__about .description p {
+  font-weight: 300;
+}
+.wrapper-surgical .surgical__about .image-ol {
+  position: absolute;
+  top: 0;
+  right: -35px;
+  height: 100%;
+}
+.wrapper-surgical .surgical__about .image-ol img {
+  height: 100%;
+}
+@media screen and (max-width: 540px) {
+  .wrapper-surgical .surgical__about .image-ol {
+    display: none;
+  }
 }
