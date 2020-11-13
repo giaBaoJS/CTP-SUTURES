@@ -1,3 +1,14 @@
 .banner-hero {
- 
+  padding: 110px 0;
+  color: $white;
+  &__title {
+    font-size: 60px;
+    line-height: 1.33;
+  }
+  @include media(540px) {
+    padding: 90px 0;
+    &__title {
+      font-size: 48px;
+    }
+  }
 }
