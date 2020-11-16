@@ -117,8 +117,15 @@
   }
   &.--custom {
     strong {
-      text-transform: uppercase;
       color: $primary;
+    }
+  }
+  &.--custom2 {
+    p {
+      font-weight: 300;
+    }
+    strong {
+      text-transform: uppercase;
     }
   }
 }
@@ -257,7 +264,7 @@
   @include media(768px) {
     padding: 80px 0;
   }
-  @include media(540px){
+  @include media(540px) {
     padding: 60px 0;
   }
 }
@@ -377,6 +384,8 @@
 //nav-cm
 .nav-cm {
   li {
+    font-weight: 300;
+    list-style: none;
     position: relative;
     padding-left: 20px;
     font-size: 16px;
@@ -393,6 +402,206 @@
       width: 6px;
       height: 6px;
       background-color: $primary2;
+    }
+  }
+}
+
+//Surgical about
+.surgical__about {
+  background-color: #f8f8f8;
+  position: relative;
+  overflow: hidden;
+  .title-cm {
+    margin-bottom: 30px;
+  }
+  .description {
+    position: relative;
+    z-index: 10;
+    p {
+      font-size: 16px;
+      font-weight: 300;
+    }
+  }
+  .image-ol {
+    position: absolute;
+    top: 0;
+    right: -35px;
+    height: 100%;
+    img {
+      height: 100%;
+    }
+    @include media(540px) {
+      display: none;
+    }
+  }
+}
+//List items for medicine - english
+.medicine-en {
+  overflow: hidden;
+  img {
+    transition: 0.5s all;
+    width: 100%;
+    margin-bottom: 5px;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  &__mid {
+    position: relative;
+    padding: 7px 12px;
+    margin-bottom: 12px;
+    .title {
+      position: relative;
+      font-weight: bold;
+      z-index: 10;
+      font-size: 14px;
+      line-height: 1.35;
+      text-transform: uppercase;
+    }
+    .overlay-bar {
+      transition: 0.5s all;
+      position: absolute;
+      width: 4px;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background-color: transparent;
+    }
+    &:hover {
+      .title {
+        color: $white;
+      }
+      .overlay-bar {
+        width: 100%;
+      }
+    }
+  }
+  &__bot {
+    font-weight: 300;
+    line-height: 1.33;
+    font-size: 12px;
+  }
+}
+.detail__listInfo {
+  background-color: #f8f8f8;
+  padding: 50px 0;
+  .row {
+    .col-2 {
+      width: calc(100% / 12 * 2);
+      @include media(540px) {
+        width: 50%;
+      }
+    }
+  }
+  .content {
+    margin-bottom: 40px;
+    @include media(540px) {
+      text-align: center;
+    }
+    img {
+      width: 70px;
+      height: auto;
+      margin-bottom: 8px;
+    }
+    &__title {
+      font-size: 14px;
+    }
+    span {
+      font-weight: 300;
+      display: block;
+    }
+  }
+}
+
+//table
+.wrap__table {
+  overflow: auto;
+  .table {
+    border-collapse: collapse;
+    text-align: center;
+    tr {
+      th {
+        background-color: #1e3461;
+        padding: 30px;
+        color: $white;
+        &:not(:last-child) {
+          border-right: 1px solid #354971;
+        }
+      }
+      td {
+        padding: 15px 30px;
+        text-transform: uppercase;
+        border-right: 1px solid #dfdfdf;
+      }
+      &:nth-child(even) {
+        background-color: #f8f8f8;
+      }
+    }
+  }
+}
+
+//content half in home
+.content__half {
+  width: 50%;
+  padding: 0 25px;
+  ul {
+    li {
+      position: relative;
+      border-top: 1px solid #d0dae3;
+      border-left: 5px solid transparent;
+      &:last-child {
+        border-bottom: 1px solid #d0dae3;
+      }
+      a {
+        display: block;
+        padding: 13px 10px;
+        position: relative;
+        z-index: 2;
+        span {
+          display: block;
+          font-weight: 300;
+          line-height: 1.33;
+          &.title {
+            font-weight: bold;
+            margin-bottom: 2px;
+          }
+        }
+        &::after {
+          content: '\f105';
+          font-family: FontAweSome;
+          position: absolute;
+          top: 50%;
+          right: 0;
+          width: 30px;
+          -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+          color: #1886eb;
+        }
+      }
+      .image-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        -webkit-transition: 0.5s all;
+        transition: 0.5s all;
+        width: 0;
+        background-size: cover;
+        background-position: center center;
+        -webkit-box-shadow: 6px 6px 16px rgba(0, 0, 0, 0.16);
+        box-shadow: 6px 6px 16px rgba(0, 0, 0, 0.16);
+      }
+      &:hover {
+        .image-overlay {
+          width: 100%;
+        }
+        a {
+          color: $white;
+          &::after {
+            color: $white;
+          }
+        }
+      }
     }
   }
 }

@@ -129,5 +129,40 @@
         margin-bottom: 30px;
       }
     }
+    &__btn {
+      display: flex;
+      justify-content: space-between;
+      .btn-main {
+        width: 170px;
+        justify-content: center;
+        align-items: center;
+        @include media(540px) {
+          width: 120px;
+        }
+        &:first-child {
+          i {
+            margin-right: 10px;
+            margin-left: 0;
+          }
+        }
+        i {
+          margin-left: 10px;
+          font-size: 14px;
+          color: $primary2;
+        }
+        &:hover {
+          background-color: $primary;
+          color: $white;
+          i {
+            color: $white;
+          }
+        }
+      }
+    }
+    &.--eng {
+      .title-cm {
+        color: $black;
+      }
+    }
   }
 }

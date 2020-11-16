@@ -584,8 +584,13 @@ button {
   overflow: auto;
 }
 .mona-content.--custom strong {
-  text-transform: uppercase;
   color: #105BAA;
+}
+.mona-content.--custom2 p {
+  font-weight: 300;
+}
+.mona-content.--custom2 strong {
+  text-transform: uppercase;
 }
 
 .img-full {
@@ -832,6 +837,8 @@ button {
 }
 
 .nav-cm li {
+  font-weight: 300;
+  list-style: none;
   position: relative;
   padding-left: 20px;
   font-size: 16px;
@@ -849,6 +856,200 @@ button {
   width: 6px;
   height: 6px;
   background-color: #1886EB;
+}
+
+.surgical__about {
+  background-color: #f8f8f8;
+  position: relative;
+  overflow: hidden;
+}
+.surgical__about .title-cm {
+  margin-bottom: 30px;
+}
+.surgical__about .description {
+  position: relative;
+  z-index: 10;
+}
+.surgical__about .description p {
+  font-size: 16px;
+  font-weight: 300;
+}
+.surgical__about .image-ol {
+  position: absolute;
+  top: 0;
+  right: -35px;
+  height: 100%;
+}
+.surgical__about .image-ol img {
+  height: 100%;
+}
+@media screen and (max-width: 540px) {
+  .surgical__about .image-ol {
+    display: none;
+  }
+}
+
+.medicine-en {
+  overflow: hidden;
+}
+.medicine-en img {
+  transition: 0.5s all;
+  width: 100%;
+  margin-bottom: 5px;
+}
+.medicine-en img:hover {
+  transform: scale(1.1);
+}
+.medicine-en__mid {
+  position: relative;
+  padding: 7px 12px;
+  margin-bottom: 12px;
+}
+.medicine-en__mid .title {
+  position: relative;
+  font-weight: bold;
+  z-index: 10;
+  font-size: 14px;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+.medicine-en__mid .overlay-bar {
+  transition: 0.5s all;
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: transparent;
+}
+.medicine-en__mid:hover .title {
+  color: #ffffff;
+}
+.medicine-en__mid:hover .overlay-bar {
+  width: 100%;
+}
+.medicine-en__bot {
+  font-weight: 300;
+  line-height: 1.33;
+  font-size: 12px;
+}
+
+.detail__listInfo {
+  background-color: #f8f8f8;
+  padding: 50px 0;
+}
+.detail__listInfo .row .col-2 {
+  width: calc(100% / 12 * 2);
+}
+@media screen and (max-width: 540px) {
+  .detail__listInfo .row .col-2 {
+    width: 50%;
+  }
+}
+.detail__listInfo .content {
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 540px) {
+  .detail__listInfo .content {
+    text-align: center;
+  }
+}
+.detail__listInfo .content img {
+  width: 70px;
+  height: auto;
+  margin-bottom: 8px;
+}
+.detail__listInfo .content__title {
+  font-size: 14px;
+}
+.detail__listInfo .content span {
+  font-weight: 300;
+  display: block;
+}
+
+.wrap__table {
+  overflow: auto;
+}
+.wrap__table .table {
+  border-collapse: collapse;
+  text-align: center;
+}
+.wrap__table .table tr th {
+  background-color: #1e3461;
+  padding: 30px;
+  color: #ffffff;
+}
+.wrap__table .table tr th:not(:last-child) {
+  border-right: 1px solid #354971;
+}
+.wrap__table .table tr td {
+  padding: 15px 30px;
+  text-transform: uppercase;
+  border-right: 1px solid #dfdfdf;
+}
+.wrap__table .table tr:nth-child(even) {
+  background-color: #f8f8f8;
+}
+
+.content__half {
+  width: 50%;
+  padding: 0 25px;
+}
+.content__half ul li {
+  position: relative;
+  border-top: 1px solid #d0dae3;
+  border-left: 5px solid transparent;
+}
+.content__half ul li:last-child {
+  border-bottom: 1px solid #d0dae3;
+}
+.content__half ul li a {
+  display: block;
+  padding: 13px 10px;
+  position: relative;
+  z-index: 2;
+}
+.content__half ul li a span {
+  display: block;
+  font-weight: 300;
+  line-height: 1.33;
+}
+.content__half ul li a span.title {
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+.content__half ul li a::after {
+  content: '\f105';
+  font-family: FontAweSome;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 30px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  color: #1886eb;
+}
+.content__half ul li .image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  width: 0;
+  background-size: cover;
+  background-position: center center;
+  -webkit-box-shadow: 6px 6px 16px rgba(0, 0, 0, 0.16);
+  box-shadow: 6px 6px 16px rgba(0, 0, 0, 0.16);
+}
+.content__half ul li:hover .image-overlay {
+  width: 100%;
+}
+.content__half ul li:hover a {
+  color: #ffffff;
+}
+.content__half ul li:hover a::after {
+  color: #ffffff;
 }
 
 #return-to-top {
@@ -1339,66 +1540,6 @@ button {
   flex-wrap: wrap;
   margin: 0 -25px;
 }
-.wrapper-home .list-product .tab-contents .item__content .row .col-6 .content__half {
-  width: 50%;
-  padding: 0 25px;
-}
-.wrapper-home .list-product .tab-contents .item__content .row .col-6 .content__half ul li {
-  position: relative;
-  border-top: 1px solid #d0dae3;
-  border-left: 5px solid transparent;
-}
-.wrapper-home .list-product .tab-contents .item__content .row .col-6 .content__half ul li:last-child {
-  border-bottom: 1px solid #d0dae3;
-}
-.wrapper-home .list-product .tab-contents .item__content .row .col-6 .content__half ul li a {
-  display: block;
-  padding: 13px 10px;
-  position: relative;
-  z-index: 2;
-}
-.wrapper-home .list-product .tab-contents .item__content .row .col-6 .content__half ul li a span {
-  display: block;
-  font-weight: 300;
-  line-height: 1.33;
-}
-.wrapper-home .list-product .tab-contents .item__content .row .col-6 .content__half ul li a span.title {
-  font-weight: bold;
-  margin-bottom: 2px;
-}
-.wrapper-home .list-product .tab-contents .item__content .row .col-6 .content__half ul li a::after {
-  content: '\f105';
-  font-family: FontAweSome;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  width: 30px;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  color: #1886eb;
-}
-.wrapper-home .list-product .tab-contents .item__content .row .col-6 .content__half ul li .image-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  -webkit-transition: 0.5s all;
-  transition: 0.5s all;
-  width: 0;
-  background-size: cover;
-  background-position: center center;
-  -webkit-box-shadow: 6px 6px 16px rgba(0, 0, 0, 0.16);
-  box-shadow: 6px 6px 16px rgba(0, 0, 0, 0.16);
-}
-.wrapper-home .list-product .tab-contents .item__content .row .col-6 .content__half ul li:hover .image-overlay {
-  width: 100%;
-}
-.wrapper-home .list-product .tab-contents .item__content .row .col-6 .content__half ul li:hover a {
-  color: #ffffff;
-}
-.wrapper-home .list-product .tab-contents .item__content .row .col-6 .content__half ul li:hover a::after {
-  color: #ffffff;
-}
 @media screen and (max-width: 768px) {
   .wrapper-home .list-product .tab-contents .item__content .row .col-6 .content {
     margin: 0 -15px;
@@ -1573,6 +1714,9 @@ button {
 .wrapper-vattuyte .vattuyte__items {
   padding: 80px 0;
 }
+.wrapper-vattuyte .vattuyte__items .title-cm {
+  margin-bottom: 20px;
+}
 .wrapper-vattuyte .vattuyte__items .row .col-4 {
   width: calc(100% / 12 * 4);
 }
@@ -1621,6 +1765,7 @@ button {
   font-weight: bold;
 }
 .wrapper-vattuyte .vattuyte__items .content__bot {
+  font-weight: 300;
   padding: 30px;
   background-color: #f8f8f8;
   border-bottom-right-radius: 12px;
@@ -1640,6 +1785,50 @@ button {
 }
 .wrapper-vattuyte .vattuyte__items .content:hover {
   box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.1);
+}
+.wrapper-vattuyte .vattuyte__items.--eng .content {
+  border-radius: 0;
+  border: none;
+}
+.wrapper-vattuyte .vattuyte__items.--eng .content:hover {
+  box-shadow: none;
+}
+.wrapper-vattuyte .vattuyte__items.--eng .content__top img {
+  transition: 0.4s all;
+}
+.wrapper-vattuyte .vattuyte__items.--eng .content__top:hover img {
+  transform: scale(1.2);
+}
+.wrapper-vattuyte .vattuyte__items.--eng .content__mid {
+  margin-bottom: 13px;
+  position: relative;
+  background-color: unset;
+  padding: 7px 12px;
+}
+.wrapper-vattuyte .vattuyte__items.--eng .content__mid a {
+  color: #000000;
+  position: relative;
+  z-index: 10;
+}
+.wrapper-vattuyte .vattuyte__items.--eng .content__mid .overlay-bar {
+  transition: 0.5s all;
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: #1886EB;
+}
+.wrapper-vattuyte .vattuyte__items.--eng .content__mid:hover a {
+  color: #ffffff;
+}
+.wrapper-vattuyte .vattuyte__items.--eng .content__mid:hover .overlay-bar {
+  width: 100%;
+}
+.wrapper-vattuyte .vattuyte__items.--eng .content__bot {
+  font-size: 12px;
+  background-color: unset;
+  padding: 0;
 }
 
 .wrapper-vattuyte-detail .spacing {
@@ -1780,6 +1969,39 @@ button {
 .wrapper-vattuyte-detail .yte-detail__danhmuc .title-cm {
   margin-bottom: 30px;
 }
+.wrapper-vattuyte-detail .yte-detail__btn {
+  display: flex;
+  justify-content: space-between;
+}
+.wrapper-vattuyte-detail .yte-detail__btn .btn-main {
+  width: 170px;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 540px) {
+  .wrapper-vattuyte-detail .yte-detail__btn .btn-main {
+    width: 120px;
+  }
+}
+.wrapper-vattuyte-detail .yte-detail__btn .btn-main:first-child i {
+  margin-right: 10px;
+  margin-left: 0;
+}
+.wrapper-vattuyte-detail .yte-detail__btn .btn-main i {
+  margin-left: 10px;
+  font-size: 14px;
+  color: #1886EB;
+}
+.wrapper-vattuyte-detail .yte-detail__btn .btn-main:hover {
+  background-color: #105BAA;
+  color: #ffffff;
+}
+.wrapper-vattuyte-detail .yte-detail__btn .btn-main:hover i {
+  color: #ffffff;
+}
+.wrapper-vattuyte-detail .yte-detail.--eng .title-cm {
+  color: #000000;
+}
 
 .wrapper-lienhe .lienhe {
   padding-top: 85px;
@@ -1808,7 +2030,19 @@ button {
     display: none;
   }
 }
+.wrapper-lienhe .lienhe .image-ol2 {
+  position: absolute;
+  top: -88px;
+  left: -188px;
+}
+@media screen and (max-width: 1200px) {
+  .wrapper-lienhe .lienhe .image-ol2 {
+    display: none;
+  }
+}
 .wrapper-lienhe .lienhe__title {
+  position: relative;
+  z-index: 10;
   font-size: 60px;
   line-height: 1.33;
   margin-bottom: 46px;
@@ -2065,38 +2299,6 @@ button {
   line-height: 1;
   font-weight: normal;
 }
-.wrapper-chiphauthuat-2 .chiphauthuat-2__detail .detail__listInfo {
-  background-color: #f8f8f8;
-  padding: 50px 0;
-}
-.wrapper-chiphauthuat-2 .chiphauthuat-2__detail .detail__listInfo .row .col-2 {
-  width: calc(100% / 12 * 2);
-}
-@media screen and (max-width: 540px) {
-  .wrapper-chiphauthuat-2 .chiphauthuat-2__detail .detail__listInfo .row .col-2 {
-    width: 50%;
-  }
-}
-.wrapper-chiphauthuat-2 .chiphauthuat-2__detail .detail__listInfo .content {
-  margin-bottom: 40px;
-}
-@media screen and (max-width: 540px) {
-  .wrapper-chiphauthuat-2 .chiphauthuat-2__detail .detail__listInfo .content {
-    text-align: center;
-  }
-}
-.wrapper-chiphauthuat-2 .chiphauthuat-2__detail .detail__listInfo .content img {
-  width: 70px;
-  height: auto;
-  margin-bottom: 8px;
-}
-.wrapper-chiphauthuat-2 .chiphauthuat-2__detail .detail__listInfo .content__title {
-  font-size: 14px;
-}
-.wrapper-chiphauthuat-2 .chiphauthuat-2__detail .detail__listInfo .content span {
-  font-weight: 300;
-  display: block;
-}
 .wrapper-chiphauthuat-2 .chiphauthuat-2__detail .detail__huongdan {
   background-color: #800f80;
   padding-top: 57px;
@@ -2188,34 +2390,484 @@ button {
 }
 .wrapper-chiphauthuat-2 .chiphauthuat-2__detail .detail__danhmuc .title {
   margin-bottom: 20px;
+  font-size: 24px;
+  line-height: 1;
+  font-weight: normal;
 }
 
-.wrapper-surgical .surgical__about {
-  background-color: #f8f8f8;
+.wrapper-home-en .introduction {
   position: relative;
   overflow: hidden;
 }
-.wrapper-surgical .surgical__about .title-cm {
-  margin-bottom: 30px;
+.wrapper-home-en .introduction .image-ol {
+  position: absolute;
+  right: 0;
+  top: 0;
 }
-.wrapper-surgical .surgical__about .description {
+@media screen and (max-width: 1024px) {
+  .wrapper-home-en .introduction .image-ol {
+    display: none;
+  }
+}
+.wrapper-home-en .introduction .row {
   position: relative;
   z-index: 10;
 }
-.wrapper-surgical .surgical__about .description p {
-  font-weight: 300;
+.wrapper-home-en .introduction .row .col-6 {
+  width: calc(100% / 12 * 7);
 }
-.wrapper-surgical .surgical__about .image-ol {
-  position: absolute;
-  top: 0;
-  right: -35px;
-  height: 100%;
+@media screen and (max-width: 1024px) {
+  .wrapper-home-en .introduction .row .col-6 {
+    width: 100%;
+  }
 }
-.wrapper-surgical .surgical__about .image-ol img {
-  height: 100%;
+.wrapper-home-en .introduction .title-cm span {
+  font-weight: bold;
+}
+@media screen and (max-width: 768px) {
+  .wrapper-home-en .products.space {
+    padding-top: 0;
+  }
+}
+.wrapper-home-en .products .row {
+  margin: 0 -25px;
+}
+.wrapper-home-en .products .row .col-3 {
+  width: calc(100% / 12 * 3);
+}
+.wrapper-home-en .products .row .col {
+  padding: 0 25px;
+}
+@media screen and (max-width: 1023px) {
+  .wrapper-home-en .products .row {
+    margin: 0 -15px;
+  }
+  .wrapper-home-en .products .row .col-3 {
+    width: calc(100% / 12 * 4);
+  }
+  .wrapper-home-en .products .row .col {
+    padding: 0 15px;
+  }
 }
 @media screen and (max-width: 540px) {
-  .wrapper-surgical .surgical__about .image-ol {
+  .wrapper-home-en .products .row .col-3 {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .wrapper-home-en .products .row .col-12 {
+    width: 100%;
+  }
+}
+.wrapper-home-en .products__title .title-cm {
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 1023px) {
+  .wrapper-home-en .products__title {
+    margin-bottom: 30px;
+  }
+}
+.wrapper-home-en .products .content__title {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #105BAA;
+  line-height: 1.35;
+  margin-bottom: 12px;
+  min-height: 65px;
+}
+.wrapper-home-en .products .content__half {
+  width: 100%;
+  padding: 0;
+}
+@media screen and (max-width: 540px) {
+  .wrapper-home-en .products .content {
+    margin-bottom: 20px;
+  }
+  .wrapper-home-en .products .content:last-child {
+    margin-bottom: 0;
+  }
+}
+.wrapper-home-en .capalities {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  position: relative;
+}
+.wrapper-home-en .capalities::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.8;
+  background-color: #1e3461;
+}
+.wrapper-home-en .capalities .row .col-5 {
+  width: calc(100% / 12 * 5);
+}
+.wrapper-home-en .capalities .row .col-7 {
+  width: calc(100% / 12 * 7);
+}
+@media screen and (max-width: 1023px) {
+  .wrapper-home-en .capalities .row .col-5,
+  .wrapper-home-en .capalities .row .col-7 {
+    width: 100%;
+  }
+  .wrapper-home-en .capalities .row .col-5 {
+    margin-bottom: 30px;
+  }
+}
+.wrapper-home-en .capalities .content {
+  position: relative;
+  z-index: 10;
+}
+.wrapper-home-en .capalities .content .title-cm {
+  margin-bottom: 25px;
+}
+.wrapper-home-en .capalities .content .more-info {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -25px;
+  margin-right: -25px;
+  margin-top: 28px;
+}
+.wrapper-home-en .capalities .content .more-info__content {
+  width: 50%;
+  padding: 0 25px;
+}
+.wrapper-home-en .capalities .content .more-info__content p img {
+  display: block;
+}
+@media screen and (max-width: 1023px) {
+  .wrapper-home-en .capalities .content .more-info {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  .wrapper-home-en .capalities .content .more-info__content {
+    padding: 0 15px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .wrapper-home-en .capalities .content .more-info__content {
+    width: 100%;
+  }
+  .wrapper-home-en .capalities .content .more-info__content:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+.wrapper-home-en .medal {
+  color: #ffffff;
+  background-image: linear-gradient(79deg, #0b395c, #105baa 67%);
+}
+.wrapper-home-en .medal .row .col-3 {
+  width: calc(100% / 12 * 3);
+}
+@media screen and (max-width: 1023px) {
+  .wrapper-home-en .medal .row .col-3 {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .wrapper-home-en .medal .row .col-3 {
+    width: 100%;
+  }
+}
+.wrapper-home-en .medal .content {
+  display: flex;
+  align-items: center;
+}
+.wrapper-home-en .medal .content__left {
+  margin-right: 20px;
+}
+.wrapper-home-en .medal .content__left img {
+  width: 50px;
+  height: auto;
+}
+.wrapper-home-en .medal .content__right {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.35;
+}
+
+.wrapper-surgical .surgical__main .container {
+  position: relative;
+}
+.wrapper-surgical .surgical__main-left {
+  position: absolute;
+  width: 100%;
+  max-width: 160px;
+  top: 0%;
+  left: -173px;
+  height: 100%;
+}
+@media screen and (max-width: 1440px) {
+  .wrapper-surgical .surgical__main-left {
     display: none;
   }
+}
+.wrapper-surgical .surgical__main-left .listof-category {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.wrapper-surgical .surgical__main-left .listof-category li {
+  padding: 8px 25px;
+  text-align: right;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.33;
+  margin-bottom: 25px;
+  border-right: 2px solid transparent;
+  position: relative;
+  z-index: 10;
+}
+.wrapper-surgical .surgical__main-left .listof-category li.active {
+  color: #1886EB;
+  border-color: #1886EB;
+}
+.wrapper-surgical .surgical__main-left .listof-category::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  border-right: 2px solid #e5e5e5;
+}
+.wrapper-surgical .surgical__main-right .surgical__category {
+  padding-bottom: 25px;
+}
+.wrapper-surgical .surgical__main-right .surgical__category:not(:first-child) {
+  padding-top: 70px;
+}
+.wrapper-surgical .surgical__main-right .surgical__category:not(:last-child) {
+  border-bottom: 1px solid #cccccc;
+}
+.wrapper-surgical .surgical__main-right .surgical__category .row .col-3 {
+  width: 25%;
+}
+.wrapper-surgical .surgical__main-right .surgical__category .row .col-9 {
+  width: 75%;
+}
+@media screen and (max-width: 1023px) {
+  .wrapper-surgical .surgical__main-right .surgical__category .row .col-3,
+  .wrapper-surgical .surgical__main-right .surgical__category .row .col-9 {
+    width: 100%;
+  }
+}
+.wrapper-surgical .surgical__main-right .surgical__category .group__title {
+  width: 100%;
+  max-width: 240px;
+}
+@media screen and (max-width: 1023px) {
+  .wrapper-surgical .surgical__main-right .surgical__category .group__title {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+}
+.wrapper-surgical .surgical__main-right .surgical__category .group__title .title {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.33;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+}
+.wrapper-surgical .surgical__main-right .surgical__category .group__title .description {
+  line-height: 1.42;
+  margin-bottom: 30px;
+}
+.wrapper-surgical .surgical__main-right .surgical__category .group__title .btn-main {
+  width: 100%;
+  max-width: 200px;
+  align-items: center;
+}
+.wrapper-surgical .surgical__main-right .surgical__category .group__title .btn-main:hover {
+  background-image: linear-gradient(to right, #1886eb 0%, #4fcafc 100%);
+  border-color: transparent;
+  color: #ffffff;
+}
+.wrapper-surgical .surgical__main-right .surgical__category .group__title .btn-main:hover i {
+  color: #ffffff;
+}
+.wrapper-surgical .surgical__main-right .surgical__category .group__title .btn-main i {
+  font-size: 16px;
+  color: #1886EB;
+}
+.wrapper-surgical .surgical__main-right .surgical__category .wrap-list-items {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -35px;
+}
+.wrapper-surgical .surgical__main-right .surgical__category .wrap-list-items .items {
+  width: calc(100% / 3);
+  margin-bottom: 45px;
+}
+.wrapper-surgical .surgical__main-right .surgical__category .wrap-list-items .items.col {
+  padding: 0 35px;
+}
+@media screen and (max-width: 1023px) {
+  .wrapper-surgical .surgical__main-right .surgical__category .wrap-list-items {
+    margin: 0 -15px;
+  }
+  .wrapper-surgical .surgical__main-right .surgical__category .wrap-list-items .items.col {
+    padding: 0 15px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .wrapper-surgical .surgical__main-right .surgical__category .wrap-list-items .items {
+    width: 50%;
+  }
+}
+
+.wrapper-surgical-1 .surgical__about .image-ol {
+  mix-blend-mode: multiply;
+}
+.wrapper-surgical-1 .surgical-1__main.space {
+  padding-top: 60px;
+}
+.wrapper-surgical-1 .surgical-1__main .list-items .row {
+  margin: 0 -30px;
+}
+.wrapper-surgical-1 .surgical-1__main .list-items .row .col-4 {
+  width: 25%;
+  margin-bottom: 45px;
+}
+.wrapper-surgical-1 .surgical-1__main .list-items .row .col-4.col {
+  padding: 0 30px;
+}
+@media screen and (max-width: 1023px) {
+  .wrapper-surgical-1 .surgical-1__main .list-items .row {
+    margin: 0 -15px;
+  }
+  .wrapper-surgical-1 .surgical-1__main .list-items .row .col-4 {
+    width: calc(100% / 3);
+  }
+  .wrapper-surgical-1 .surgical-1__main .list-items .row .col {
+    padding: 0 15px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .wrapper-surgical-1 .surgical-1__main .list-items .row .col-4 {
+    width: 100%;
+  }
+}
+.wrapper-surgical-1 .surgical-1__main .description .info__detail:not(:last-child) {
+  margin-bottom: 64px;
+}
+.wrapper-surgical-1 .surgical-1__main .description .info__detail .title {
+  font-size: 24px;
+  line-height: 1.33;
+  text-transform: uppercase;
+  font-weight: 300;
+  color: #105BAA;
+  margin-bottom: 25px;
+}
+.wrapper-surgical-1 .surgical-1__main .description .info__detail .nav-cm li {
+  font-size: 14px;
+}
+.wrapper-surgical-1 .surgical-1__main .description .info__detail-group:not(:last-child) {
+  margin-bottom: 35px;
+}
+.wrapper-surgical-1 .surgical-1__main .description .info__detail-group .sub-title {
+  font-size: 16px;
+  line-height: 1.3;
+  margin-bottom: 25px;
+}
+
+.wrapper-surgical-2 {
+  overflow: hidden;
+}
+.wrapper-surgical-2 .surgical-2__main .top .title-cm {
+  font-weight: bold;
+  margin-bottom: 48px;
+  color: #801780;
+}
+.wrapper-surgical-2 .surgical-2__main .detail__listInfo {
+  padding-top: 0;
+  background-color: unset;
+}
+.wrapper-surgical-2 .surgical-2__main .detail__listInfo .title-cm {
+  margin-bottom: 30px;
+}
+.wrapper-surgical-2 .surgical-2__main .surgical__instruction .title-cm {
+  margin-bottom: 37px;
+}
+.wrapper-surgical-2 .surgical-2__main .surgical__instruction .description {
+  column-count: 2;
+  column-gap: 30px;
+}
+@media screen and (max-width: 540px) {
+  .wrapper-surgical-2 .surgical-2__main .surgical__instruction .description {
+    column-count: 1;
+  }
+}
+.wrapper-surgical-2 .surgical-2__main .surgical__instruction .description .items {
+  margin-bottom: 38px;
+}
+.wrapper-surgical-2 .surgical-2__main .surgical__instruction .description .items strong {
+  text-transform: uppercase;
+}
+.wrapper-surgical-2 .surgical-2__main .surgical__instruction .description .items span {
+  font-weight: bold;
+  color: #801780;
+}
+.wrapper-surgical-2 .surgical-2__main .surgical__instruction .description .items .nav-cm li {
+  font-size: 14px;
+}
+.wrapper-surgical-2 .surgical-2__main .surgical__twocolumn .row .col-6 {
+  width: 50%;
+  position: relative;
+}
+@media screen and (max-width: 1023px) {
+  .wrapper-surgical-2 .surgical-2__main .surgical__twocolumn .row .col-6 {
+    width: 100%;
+  }
+}
+.wrapper-surgical-2 .surgical-2__main .surgical__twocolumn .content {
+  position: relative;
+  z-index: 10;
+  box-shadow: 10px 10px 30px 0 rgba(0, 0, 0, 0.16);
+  background-color: #105BAA;
+  color: #ffffff;
+  padding: 70px;
+}
+@media screen and (max-width: 540px) {
+  .wrapper-surgical-2 .surgical-2__main .surgical__twocolumn .content {
+    padding: 30px 15px;
+  }
+}
+.wrapper-surgical-2 .surgical-2__main .surgical__twocolumn .content .title-cm {
+  margin-bottom: 23px;
+}
+.wrapper-surgical-2 .surgical-2__main .surgical__twocolumn .content .nav-cm li {
+  font-weight: bold;
+}
+.wrapper-surgical-2 .surgical-2__main .surgical__twocolumn .content .nav-cm li:not(:last-child) {
+  margin-bottom: 35px;
+}
+@media screen and (max-width: 540px) {
+  .wrapper-surgical-2 .surgical-2__main .surgical__twocolumn .content .nav-cm li:not(:last-child) {
+    margin-bottom: 25px;
+  }
+}
+.wrapper-surgical-2 .surgical-2__main .surgical__twocolumn .img-ol {
+  position: absolute;
+  right: -326px;
+  top: -154px;
+}
+@media screen and (max-width: 1023px) {
+  .wrapper-surgical-2 .surgical-2__main .surgical__twocolumn .img-ol {
+    display: none;
+  }
+}
+.wrapper-surgical-2 .surgical-2__main .surgical__twocolumn .img-ol .img {
+  width: 100%;
+}
+.wrapper-surgical-2 .surgical-2__main .surgical__table .title-cm {
+  margin-bottom: 30px;
 }

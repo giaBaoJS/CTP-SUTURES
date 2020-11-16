@@ -13,36 +13,6 @@
         font-weight: normal;
       }
     }
-    .detail__listInfo {
-      background-color: #f8f8f8;
-      padding: 50px 0;
-      .row {
-        .col-2 {
-          width: calc(100% / 12 * 2);
-          @include media(540px) {
-            width: 50%;
-          }
-        }
-      }
-      .content {
-        margin-bottom: 40px;
-        @include media(540px) {
-          text-align: center;
-        }
-        img {
-          width: 70px;
-          height: auto;
-          margin-bottom: 8px;
-        }
-        &__title {
-          font-size: 14px;
-        }
-        span {
-          font-weight: 300;
-          display: block;
-        }
-      }
-    }
     .detail__huongdan {
       background-color: #800f80;
       padding-top: 57px;
@@ -131,6 +101,9 @@
       padding: 60px 0;
       .title {
         margin-bottom: 20px;
+        font-size: 24px;
+        line-height: 1;
+        font-weight: normal;
       }
     }
   }
