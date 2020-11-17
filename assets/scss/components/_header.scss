@@ -336,8 +336,23 @@
                     }
                     &:hover {
                       background-color: $primary2;
-                      a {
+                      & > a {
                         color: $white;
+                      }
+                    }
+                    &.dropdown {
+                      a {
+                        justify-content: space-between;
+                        i {
+                        }
+                      }
+                      @include media(1200px){
+                        &:hover{
+                          background-color: $white;
+                          a{
+                            color: $primary;
+                          }
+                        }
                       }
                     }
                   }
@@ -356,10 +371,29 @@
                       }
                     }
                   }
+                  .submenu {
+                    top: 0;
+                    left: 100%;
+                    li {
+                      &:hover {
+                        background-color: $white;
+                        & > a {
+                          color: $primary2;
+                        }
+                      }
+                    }
+                    @include media(1200px){
+                      left: unset;
+                      li{
+                        border-bottom: none;
+                        border-top: 1px dashed $primary;
+                      }
+                    }
+                  }
                 }
                 @include min-media(1200px) {
                   &:hover {
-                    .submenu {
+                    & > .submenu {
                       opacity: 1;
                       visibility: visible;
                       pointer-events: auto;

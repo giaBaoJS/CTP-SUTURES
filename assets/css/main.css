@@ -427,8 +427,19 @@ button {
 .header__menu .main-header .isner .right .main-menu-nav li .submenu li:hover {
   background-color: #1886EB;
 }
-.header__menu .main-header .isner .right .main-menu-nav li .submenu li:hover a {
+.header__menu .main-header .isner .right .main-menu-nav li .submenu li:hover > a {
   color: #ffffff;
+}
+.header__menu .main-header .isner .right .main-menu-nav li .submenu li.dropdown a {
+  justify-content: space-between;
+}
+@media screen and (max-width: 1200px) {
+  .header__menu .main-header .isner .right .main-menu-nav li .submenu li.dropdown:hover {
+    background-color: #ffffff;
+  }
+  .header__menu .main-header .isner .right .main-menu-nav li .submenu li.dropdown:hover a {
+    color: #105BAA;
+  }
 }
 @media screen and (max-width: 1200px) {
   .header__menu .main-header .isner .right .main-menu-nav li .submenu {
@@ -447,8 +458,27 @@ button {
     border-bottom: none;
   }
 }
+.header__menu .main-header .isner .right .main-menu-nav li .submenu .submenu {
+  top: 0;
+  left: 100%;
+}
+.header__menu .main-header .isner .right .main-menu-nav li .submenu .submenu li:hover {
+  background-color: #ffffff;
+}
+.header__menu .main-header .isner .right .main-menu-nav li .submenu .submenu li:hover > a {
+  color: #1886EB;
+}
+@media screen and (max-width: 1200px) {
+  .header__menu .main-header .isner .right .main-menu-nav li .submenu .submenu {
+    left: unset;
+  }
+  .header__menu .main-header .isner .right .main-menu-nav li .submenu .submenu li {
+    border-bottom: none;
+    border-top: 1px dashed #105BAA;
+  }
+}
 @media screen and (min-width: 1200px) {
-  .header__menu .main-header .isner .right .main-menu-nav li:hover .submenu {
+  .header__menu .main-header .isner .right .main-menu-nav li:hover > .submenu {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
