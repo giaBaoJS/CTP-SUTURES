@@ -29,9 +29,8 @@
     transition: all 0.3s ease;
   }
 }
-
 //Button main
-.btn-main{
+.btn-main {
   padding: 13px 20px;
   font-size: 12px;
   line-height: 1.33;
@@ -41,4 +40,15 @@
   border: 1px solid $primary2;
   letter-spacing: 0.3px;
   font-weight: bold;
+  i {
+    font-size: 16px;
+    color: $primary2;
+  }
+  &:hover {
+    background-image: linear-gradient(to right, #1886eb 0%, #4fcafc 100%);
+    color: $white;
+    i {
+      color: $white;
+    }
+  }
 }

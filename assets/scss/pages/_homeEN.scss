@@ -1,4 +1,21 @@
 .wrapper-home-en {
+  .btn-main {
+    width: 100%;
+    max-width: 230px;
+  }
+  .hightlight {
+    padding: 25px 0;
+    background-color: $primary2;
+    p {
+      font-size: 20px;
+      color: $white;
+      text-align: center;
+      text-transform: uppercase;
+      width: 100%;
+      max-width: 405px;
+      margin: auto;
+    }
+  }
   .introduction {
     position: relative;
     overflow: hidden;
@@ -140,8 +157,15 @@
           width: 50%;
           padding: 0 25px;
           p {
+            display: flex;
+            align-items: flex-start;
+            font-weight: bold;
+            text-transform: uppercase;
             img {
               display: block;
+              width: 24px;
+              height: auto;
+              margin-right: 15px;
             }
           }
         }
@@ -163,35 +187,80 @@
       }
     }
   }
-  .medal {
-    color: $white;
-    background-image: linear-gradient(79deg, #0b395c, #105baa 67%);
-    .row {
-      .col-3 {
-        width: calc(100% / 12 * 3);
-        @include media(1023px) {
-          width: 50%;
-          margin-bottom: 30px;
-        }
+  .superior {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    &__left {
+      width: 575px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &__right {
+      position: relative;
+      width: calc(100% - 575px);
+      &-detail {
+        position: relative;
+        z-index: 10;
+        padding: 100px;
         @include media(540px) {
-          width: 100%;
+          padding: 50px 15px;
+        }
+        .title-cm {
+          margin-bottom: 35px;
+        }
+        .row {
+          .col-6 {
+            width: 50%;
+            margin-bottom: 35px;
+            &:first-child {
+              .content {
+                border-bottom: 1px solid #b7b7b7;
+              }
+            }
+            &:last-child {
+              margin-bottom: 0;
+            }
+            @include media(540px) {
+              width: 100%;
+            }
+          }
+        }
+        .content {
+          padding-bottom: 40px;
+          &__title {
+            font-size: 20px;
+            line-height: 1.33;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: $primary;
+          }
+          .description {
+            margin-bottom: 25px;
+            h5 {
+              text-transform: uppercase;
+            }
+          }
+        }
+      }
+      .image-ol {
+        position: absolute;
+        right: 0;
+        bottom: -25px;
+        @include media(1023px) {
+          display: none;
         }
       }
     }
-    .content {
-      display: flex;
-      align-items: center;
+    @include media(1024px) {
       &__left {
-        margin-right: 20px;
-        img {
-          width: 50px;
-          height: auto;
-        }
+        width: 100%;
       }
       &__right {
-        font-weight: bold;
-        font-size: 20px;
-        line-height: 1.35;
+        width: 100%;
       }
     }
   }

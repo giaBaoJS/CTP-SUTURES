@@ -29,10 +29,15 @@ if (scrollY >= headerOffsetTop + headerHeight) {
 $(window).on('scroll', function () {
   if (scrollY >= headerOffsetTop + headerHeight) {
     header.addClass('header-fixed');
+    header.removeClass('home-eng');
     header.next().css('margin-top', headerFixedHeight);
   } else {
     header.removeClass('header-fixed');
     header.next().css('margin-top', 0);
+    if(header.hasClass('template-en')==true){
+      console.log('hi');
+      header.addClass('home-eng');
+    }
   }
 });
 
@@ -43,14 +48,13 @@ $('.is-slider').each(function () {
   let container = $(this).find('.swiper-container')[0];
   var swiperslider = new Swiper(container, {
     direction: 'horizontal',
-    loop: false,
-    slidesPerView: 2,
-    speed: 1000,
-    slidesPerColumn: 1,
+    loop: true,
+    slidesPerView: 1,
+    speed: 1200,
     observer: true,
-    // autoplay: {
-    //   delay: 2000,
-    // },
+    autoplay: {
+      delay: 3000,
+    },
     navigation: {
       nextEl: nextButton,
       prevEl: prevButton,
@@ -58,16 +62,6 @@ $('.is-slider').each(function () {
     pagination: {
       el: pagination,
       clickable: true,
-    },
-    breakpoints: {
-      768: {
-        slidesPerColumn: 2,
-        slidesPerView: 3,
-      },
-      1200: {
-        slidesPerColumn: 2,
-        slidesPerView: 6,
-      },
     },
   });
 });

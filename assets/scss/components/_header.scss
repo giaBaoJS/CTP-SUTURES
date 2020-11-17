@@ -1,6 +1,5 @@
 .header {
   position: relative;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.16);
   z-index: 99;
   &-fixed {
     .header__menu {
@@ -73,26 +72,55 @@
       }
     }
     &.--eng {
-      background-color: #1E3461;
+      background-color: #1e3461;
       color: $white;
-      .header__topbar-right{
-        ul{
-          li{
-            a{
+      .header__topbar-right {
+        ul {
+          li {
+            a {
               border-color: $white;
               color: $white;
-              i{
+              i {
                 color: $white;
               }
-              &:hover{
-                border-color: #1E3461;
+              &:hover {
+                border-color: #1e3461;
                 background-color: $white;
-                i{
-                  color:#1E3461;
+                i {
+                  color: #1e3461;
                 }
               }
             }
-            
+          }
+        }
+      }
+    }
+  }
+  &.home-eng {
+    position: fixed;
+    width: 100%;
+    .header__topbar {
+      background-color: rgba(30, 52, 97, 0.3);
+    }
+    .header__menu {
+      box-shadow: unset;
+      background-color: transparent;
+      .main-header {
+        a {
+          color: $white;
+        }
+        .hamburger-btn {
+          .bar {
+            background-color: $white;
+            &::after,
+            &::before {
+              background-color: $white;
+            }
+          }
+        }
+        .main-logo {
+          img {
+            filter: brightness(0) invert(1);
           }
         }
       }
@@ -318,12 +346,12 @@
                     position: relative;
                     width: 100%;
                     li {
-                      background-color: $primary;
-                      border-bottom: 1px dashed $white;
+                      background-color: $white;
+                      border-bottom: 1px dashed $primary;
                       width: 100%;
                       a {
-                        padding: 5px 15px 5px 25px;
-                        color: $white;
+                        padding: 12px 14px;
+                        color: $primary;
                         border-bottom: none;
                       }
                     }

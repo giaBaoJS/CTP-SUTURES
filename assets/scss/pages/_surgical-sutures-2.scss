@@ -16,6 +16,8 @@
       background-color: unset;
     }
     .surgical__instruction {
+      position: relative;
+      z-index: 10;
       .title-cm {
         margin-bottom: 37px;
       }

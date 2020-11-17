@@ -1,6 +1,5 @@
 .wrapper-chiphauthuat-1 {
   .chiphauthuat-1__detail {
-    overflow: hidden;
     .row {
       .col-3 {
         width: 25%;
@@ -25,7 +24,7 @@
         position: absolute;
         top: -104px;
         right: -152px;
-        @include media(1023px) {
+        @include media(1024px) {
           display: none;
         }
       }
