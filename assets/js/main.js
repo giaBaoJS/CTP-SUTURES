@@ -70,11 +70,13 @@ $('.is-slider').each(function () {
 $('.main-menu-btn').on('click', function () {
   $(this).addClass('active');
   $('.main-menu').addClass('active');
+  $('body').css('overflow', 'hidden');
 });
 
 $('.main-menu-overlay').on('click', function () {
   $('.main-menu-btn').removeClass('active');
   $('.main-menu').removeClass('active');
+  $('body').css('overflow', '');
 });
 
 //Add arrow for submenu
