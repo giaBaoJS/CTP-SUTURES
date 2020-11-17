@@ -869,7 +869,6 @@ button {
   height: auto;
 }
 .medicine__mid {
-  height: 100%;
   padding: 15px;
   background-color: transparent;
 }
@@ -879,6 +878,7 @@ button {
   text-transform: uppercase;
 }
 .medicine__bot {
+  height: 100%;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   padding: 15px;
