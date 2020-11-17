@@ -360,6 +360,7 @@ button {
 @media screen and (min-width: 1200px) {
   .header__menu .main-header .isner .right .main-menu-nav li a i {
     pointer-events: none;
+    transition: none;
   }
 }
 .header__menu .main-header .isner .right .main-menu-nav li a i.--active {
@@ -395,6 +396,7 @@ button {
   z-index: 10;
   position: absolute;
   width: max-content;
+  box-shadow: 10px 10px 30px 0 rgba(0, 0, 0, 0.16);
   top: 100%;
   left: 0;
 }
@@ -429,6 +431,7 @@ button {
 }
 .header__menu .main-header .isner .right .main-menu-nav li .submenu li:hover > a {
   color: #ffffff;
+  border-color: transparent;
 }
 .header__menu .main-header .isner .right .main-menu-nav li .submenu li.dropdown a {
   justify-content: space-between;
@@ -441,8 +444,12 @@ button {
     color: #105BAA;
   }
 }
+.header__menu .main-header .isner .right .main-menu-nav li .submenu li:last-child a {
+  border-bottom: none;
+}
 @media screen and (max-width: 1200px) {
   .header__menu .main-header .isner .right .main-menu-nav li .submenu {
+    box-shadow: unset;
     display: none;
     position: relative;
     width: 100%;
@@ -467,6 +474,7 @@ button {
 }
 .header__menu .main-header .isner .right .main-menu-nav li .submenu .submenu li:hover > a {
   color: #1886EB;
+  border-color: #e2e2e2;
 }
 @media screen and (max-width: 1200px) {
   .header__menu .main-header .isner .right .main-menu-nav li .submenu .submenu {

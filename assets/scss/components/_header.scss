@@ -263,6 +263,7 @@
                   i {
                     @include min-media(1200px) {
                       pointer-events: none;
+                      transition: none;
                     }
                     transition: 0.3s all;
                     font-weight: bold;
@@ -309,6 +310,7 @@
                   z-index: 10;
                   position: absolute;
                   width: max-content;
+                  box-shadow: 10px 10px 30px 0 rgba(0, 0, 0, 0.16);
                   top: 100%;
                   left: 0;
                   @include min-media(1200px) {
@@ -338,6 +340,7 @@
                       background-color: $primary2;
                       & > a {
                         color: $white;
+                        border-color: transparent;
                       }
                     }
                     &.dropdown {
@@ -355,8 +358,14 @@
                         }
                       }
                     }
+                    &:last-child{
+                      a{
+                        border-bottom: none;
+                      }
+                    }
                   }
                   @include media(1200px) {
+                    box-shadow: unset;
                     display: none;
                     position: relative;
                     width: 100%;
@@ -379,6 +388,7 @@
                         background-color: $white;
                         & > a {
                           color: $primary2;
+                          border-color: #e2e2e2;
                         }
                       }
                     }
