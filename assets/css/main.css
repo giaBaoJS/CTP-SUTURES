@@ -2157,10 +2157,16 @@ button {
   .wrapper-home .list-product .tab-contents .item__content .row .col-6 .content__half {
     padding: 0 15px;
   }
+  .wrapper-home .list-product .tab-contents .item__content .row .col-6 .content__half ul li a::after {
+    text-align: right;
+  }
 }
 @media screen and (max-width: 540px) {
   .wrapper-home .list-product .tab-contents .item__content .row .col-6 .content__half {
     width: 100%;
+  }
+  .wrapper-home .list-product .tab-contents .item__content .row .col-6 .content__half ul li a::after {
+    text-align: left;
   }
 }
 .wrapper-home .home__oem {

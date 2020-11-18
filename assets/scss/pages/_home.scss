@@ -434,11 +434,29 @@
                   margin: 0 -15px;
                   &__half {
                     padding: 0 15px;
+                    ul{
+                      li{
+                        a{
+                          &::after{
+                            text-align: right;
+                          }
+                        }
+                      }
+                    }
                   }
                 }
                 @include media(540px) {
                   &__half {
                     width: 100%;
+                    ul{
+                      li{
+                        a{
+                          &::after{
+                            text-align: left;
+                          }
+                        }
+                      }
+                    }
                   }
                 }
               }
