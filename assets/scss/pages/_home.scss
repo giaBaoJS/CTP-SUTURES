@@ -5,6 +5,26 @@
       padding-top: 200px;
       padding-bottom: 347px;
     }
+    .swiper-pagination{
+      display: none;
+      @include media(768px){
+        display: block;
+      }
+      &.swiper-pagination-bullets{
+        .swiper-pagination-bullet{
+          margin: 0 10px;
+          width: 15px;
+          height: 15px;
+          opacity: 1;
+          border: 2px solid $primary2;
+          background-color: transparent;
+          &-active{
+            border-color: transparent;
+            background: $primary2;
+          }
+        }
+      }
+    }
     .content {
       .btn-main {
         margin-bottom: 137px;
@@ -37,6 +57,9 @@
         i {
           color: $white;
         }
+      }
+      &:focus{
+        outline: none;
       }
     }
     .swiper-button-prev {
@@ -96,8 +119,12 @@
       bottom: 0;
       z-index: 10;
       width: 100%;
-      @include media(540px) {
+      @include media(768px){
         position: static;
+
+        &.space{
+          padding: 40px 0;
+        }
       }
       .content {
         color: $black;

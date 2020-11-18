@@ -714,6 +714,8 @@ button {
   background-color: #2d394e;
   color: #ffffff;
   width: 100%;
+  border: 1px solid transparent;
+  transition: 0.3s all;
 }
 .form-search .form input::placeholder {
   color: #6c7483;
@@ -721,6 +723,9 @@ button {
   font-weight: bold;
   text-transform: uppercase;
   line-height: 1.33;
+}
+.form-search .form input:focus {
+  border-color: #1886EB;
 }
 .form-search .form button {
   position: absolute;
@@ -818,9 +823,12 @@ button {
 .danhmuc-main__inner ul .items {
   font-weight: bold;
   cursor: pointer;
-  padding: 20px 12px;
   text-align: center;
   border-bottom: 1px solid #e2e2e2;
+}
+.danhmuc-main__inner ul .items a {
+  padding: 20px 12px;
+  display: inline-block;
 }
 .danhmuc-main__inner ul .items:first-child {
   border-top-left-radius: 12px;
@@ -873,6 +881,10 @@ button {
   height: auto;
 }
 .medicine__mid {
+  min-height: 76px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 15px;
   background-color: transparent;
 }
@@ -973,6 +985,8 @@ button {
   transform: scale(1.1);
 }
 .medicine-en__mid {
+  display: flex;
+  align-items: center;
   min-height: 50px;
   position: relative;
   padding: 7px 12px;
@@ -1140,15 +1154,33 @@ button {
 }
 @media screen and (max-width: 1023px) {
   .slider-home .swiper-container .swiper-wrapper .swiper-slide {
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding-top: 150px;
+    padding-bottom: 150px;
   }
 }
 @media screen and (max-width: 540px) {
   .slider-home .swiper-container .swiper-wrapper .swiper-slide {
-    padding-top: 150px;
-    padding-bottom: 150px;
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
+}
+.slider-home .swiper-container .swiper-pagination.swiper-pagination-bullets {
+  bottom: 85px;
+}
+.slider-home .swiper-container .swiper-pagination.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 10px;
+  width: 15px;
+  height: 15px;
+  opacity: 1;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background-color: transparent;
+}
+.slider-home .swiper-container .swiper-pagination.swiper-pagination-bullets .swiper-pagination-bullet-active {
+  border-color: transparent;
+  background: #ffffff;
+}
+.slider-home .swiper-container .swiper-pagination.swiper-pagination-bullets .swiper-pagination-bullet:focus {
+  outline: none;
 }
 .slider-home .content {
   padding: 0 30px;
@@ -1504,6 +1536,26 @@ button {
   padding-top: 200px;
   padding-bottom: 347px;
 }
+.wrapper-home .slider-home .swiper-pagination {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .wrapper-home .slider-home .swiper-pagination {
+    display: block;
+  }
+}
+.wrapper-home .slider-home .swiper-pagination.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 10px;
+  width: 15px;
+  height: 15px;
+  opacity: 1;
+  border: 2px solid #1886EB;
+  background-color: transparent;
+}
+.wrapper-home .slider-home .swiper-pagination.swiper-pagination-bullets .swiper-pagination-bullet-active {
+  border-color: transparent;
+  background: #1886EB;
+}
 .wrapper-home .slider-home .content .btn-main {
   margin-bottom: 137px;
   box-shadow: 6px 6px 16px 0 rgba(0, 0, 0, 0.16);
@@ -1543,6 +1595,10 @@ button {
 .wrapper-home .slider-home .swiper-button-next:hover i,
 .wrapper-home .slider-home .swiper-button-prev:hover i {
   color: #ffffff;
+}
+.wrapper-home .slider-home .swiper-button-next:focus,
+.wrapper-home .slider-home .swiper-button-prev:focus {
+  outline: none;
 }
 .wrapper-home .slider-home .swiper-button-prev {
   left: 0;
@@ -1602,9 +1658,12 @@ button {
   z-index: 10;
   width: 100%;
 }
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 768px) {
   .wrapper-home .slider-home .medal {
     position: static;
+  }
+  .wrapper-home .slider-home .medal.space {
+    padding: 40px 0;
   }
 }
 .wrapper-home .slider-home .medal .content {
@@ -2520,6 +2579,12 @@ button {
     margin-bottom: 50px;
   }
 }
+.wrapper-chiphauthuat .chiphauthuat__detail-bot .wrap__information {
+  padding-top: 27px;
+}
+.wrapper-chiphauthuat .chiphauthuat__detail-bot .wrap__information:first-child {
+  padding-top: 0;
+}
 .wrapper-chiphauthuat .chiphauthuat__detail-bot .wrap__information .info__top {
   margin-bottom: 25px;
 }
@@ -2532,7 +2597,6 @@ button {
 }
 .wrapper-chiphauthuat .chiphauthuat__detail-bot .wrap__information .info__list__main {
   padding-bottom: 30px;
-  margin-bottom: 27px;
 }
 .wrapper-chiphauthuat .chiphauthuat__detail-bot .wrap__information .info__btn {
   text-align: right;

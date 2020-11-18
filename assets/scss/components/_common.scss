@@ -193,12 +193,17 @@
       background-color: #2d394e;
       color: $white;
       width: 100%;
+      border: 1px solid transparent;
+      transition: 0.3s all;
       &::placeholder {
         color: #6c7483;
         font-size: 12px;
         font-weight: bold;
         text-transform: uppercase;
         line-height: 1.33;
+      }
+      &:focus{
+        border-color: $primary2;
       }
     }
     button {
@@ -296,6 +301,10 @@
     box-shadow: 6px 6px 16px 0 rgba(0, 0, 0, 0.1);
     ul {
       .items {
+        a{
+          padding: 20px 12px;
+          display: inline-block;
+        }
         font-weight: bold;
         &:first-child {
           border-top-left-radius: 12px;
@@ -306,7 +315,6 @@
           border-bottom-right-radius: 12px;
         }
         cursor: pointer;
-        padding: 20px 12px;
         text-align: center;
         border-bottom: 1px solid #e2e2e2;
         &:last-child {
@@ -357,6 +365,10 @@
     }
   }
   &__mid {
+    min-height: 76px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 15px;
     background-color: transparent;
     a {
@@ -457,6 +469,8 @@
     }
   }
   &__mid {
+    display: flex;
+    align-items: center;
     min-height: 50px;
     position: relative;
     padding: 7px 12px;
@@ -630,12 +644,32 @@
         background-repeat: no-repeat;
         background-size: cover;
         @include media(1023px) {
-          padding-top: 200px;
-          padding-bottom: 200px;
-        }
-        @include media(540px) {
           padding-top: 150px;
           padding-bottom: 150px;
+        }
+        @include media(540px) {
+          padding-top: 100px;
+          padding-bottom: 100px;
+        }
+      }
+    }
+    .swiper-pagination{
+      &.swiper-pagination-bullets{
+        bottom: 85px;
+        .swiper-pagination-bullet{
+          margin: 0 10px;
+          width: 15px;
+          height: 15px;
+          opacity: 1;
+          border: 2px solid rgba(255, 255, 255, 0.2);
+          background-color: transparent;
+          &-active{
+            border-color: transparent;
+            background: $white;
+          }
+          &:focus{
+            outline: none;
+          }
         }
       }
     }

@@ -94,6 +94,10 @@
        
       }
       .wrap__information {
+        padding-top: 27px;
+        &:first-child{
+          padding-top: 0;
+        }
         .info__top {
           margin-bottom: 25px;
           &-title {
@@ -108,7 +112,6 @@
         }
         .info__list__main {
           padding-bottom: 30px;
-          margin-bottom: 27px;
         }
         .info__btn {
           text-align: right;

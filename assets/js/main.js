@@ -34,8 +34,7 @@ $(window).on('scroll', function () {
   } else {
     header.removeClass('header-fixed');
     header.next().css('margin-top', 0);
-    if(header.hasClass('template-en')==true){
-      console.log('hi');
+    if (header.hasClass('template-en') == true) {
       header.addClass('home-eng');
     }
   }
@@ -104,5 +103,30 @@ $('.tab-list .tabs').click(function (e) {
 });
 //End tab list
 
-
-//Scroll active class
+//Scroll and click active class
+$('.wrap__itemsc li').on('click', 'a[href^="#"]', function (event) {
+  event.preventDefault();
+  let headerFixedHeight;
+  headerFixedHeight = $('.header__menu').outerHeight();
+  $('html, body').animate(
+    {
+      scrollTop: $($.attr(this, 'href')).offset().top - headerFixedHeight,
+    },
+    500
+  );
+});
+$(window).bind('scroll', function () {
+  let headerFixedHeight;
+  headerFixedHeight = $('.header__menu').outerHeight();
+  var currentTop = $(window).scrollTop();
+  var elems = $('.cate-list');
+  elems.each(function (index) {
+    var elemTop = $(this).offset().top - headerFixedHeight - 1;
+    var elemBottom = elemTop + $(this).height();
+    if (currentTop >= elemTop && currentTop <= elemBottom) {
+      var id = $(this).attr('id');
+      var navElem = $('a[href="#' + id + '"]');
+      navElem.parent().addClass('active').siblings().removeClass('active');
+    }
+  });
+});
