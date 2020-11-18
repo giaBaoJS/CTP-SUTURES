@@ -103,3 +103,6 @@ $('.tab-list .tabs').click(function (e) {
   $('.' + id).addClass('active');
 });
 //End tab list
+
+
+//Scroll active class

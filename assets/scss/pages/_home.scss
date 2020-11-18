@@ -96,18 +96,19 @@
       bottom: 0;
       z-index: 10;
       width: 100%;
-      @include media(540px){
+      @include media(540px) {
         position: static;
       }
       .content {
         color: $black;
       }
-      &.space{
+      &.space {
         padding: 60px 0;
       }
     }
   }
   .home__expert {
+    overflow: hidden;
     .row {
       margin: 0;
       .col-6 {
@@ -265,6 +266,10 @@
       }
     }
   }
+  .home__nangluc{
+    overflow: hidden;
+
+  }
   .list-product {
     .tab-list {
       display: flex;
@@ -302,9 +307,9 @@
         h4 {
           font-weight: 300;
         }
-        @include media(540px){
+        @include media(540px) {
           width: 100%;
-          &::before{
+          &::before {
             content: none;
           }
         }
@@ -353,8 +358,8 @@
                     padding: 0 15px;
                   }
                 }
-                @include media(540px){
-                  &__half{
+                @include media(540px) {
+                  &__half {
                     width: 100%;
                   }
                 }
@@ -366,7 +371,26 @@
     }
   }
   .home__oem {
+    position: relative;
     &-top {
+      .container {
+        position: relative;
+        &::before {
+          content: '';
+          position: absolute;
+          top: -251px;
+          left: 0;
+          border-left: 45px solid transparent;
+          border-right: 45px solid transparent;
+          z-index: 10;
+          border-top: 45px solid $white;
+        }
+        @include media(1024px){
+          &::before{
+            content: none;
+          }
+        }
+      }
       padding-top: 250px;
       padding-bottom: 40px;
       background-position: center;
@@ -402,6 +426,7 @@
       }
     }
     &-bottom {
+      overflow: hidden;
       .container {
         width: 100%;
       }

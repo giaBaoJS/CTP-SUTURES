@@ -1,6 +1,7 @@
 .wrapper-surgical-2 {
   overflow: hidden;
   .surgical-2__main {
+    overflow: hidden;
     .top {
       .title-cm {
         font-weight: bold;
@@ -9,11 +10,20 @@
       }
     }
     .detail__listInfo {
+      position: relative;
       padding-top: 0;
       .title-cm {
         margin-bottom: 30px;
       }
       background-color: unset;
+      .image-ol{
+        position: absolute;
+        top: -300px;
+        left: -1090px;
+        @include media(1023px){
+          display: none;
+        }
+      }
     }
     .surgical__instruction {
       position: relative;

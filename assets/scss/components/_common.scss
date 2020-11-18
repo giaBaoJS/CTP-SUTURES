@@ -457,6 +457,7 @@
     }
   }
   &__mid {
+    min-height: 50px;
     position: relative;
     padding: 7px 12px;
     margin-bottom: 12px;
@@ -672,6 +673,7 @@
 
 //medal page
 .medal {
+  overflow: hidden;
   color: $white;
   background-image: linear-gradient(79deg, #0b395c, #105baa 67%);
   .row {
