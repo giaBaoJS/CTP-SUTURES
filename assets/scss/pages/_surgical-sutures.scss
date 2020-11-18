@@ -22,6 +22,7 @@
         border-right: 2px solid #e5e5e5;
       }
       .listof-category {
+        position: -webkit-sticky;
         position: sticky;
         top: 100px;
         width: 100%;
@@ -91,8 +92,22 @@
           .btn-main {
             width: 100%;
             max-width: 200px;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
             align-items: center;
             &:hover {
+              background-image: -webkit-gradient(
+                linear,
+                left top,
+                right top,
+                from(#1886eb),
+                to(#4fcafc)
+              );
+              background-image: -o-linear-gradient(
+                left,
+                #1886eb 0%,
+                #4fcafc 100%
+              );
               background-image: linear-gradient(
                 to right,
                 #1886eb 0%,
@@ -111,7 +126,10 @@
           }
         }
         .wrap-list-items {
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
+          -ms-flex-wrap: wrap;
           flex-wrap: wrap;
           margin: 0 -35px;
 

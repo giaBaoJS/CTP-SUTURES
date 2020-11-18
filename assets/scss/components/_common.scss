@@ -141,11 +141,13 @@
 .img-full {
   width: 100%;
   height: auto;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 .img-fluid {
   max-width: 100%;
   height: auto;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 //Spacing padding
@@ -194,7 +196,37 @@
       color: $white;
       width: 100%;
       border: 1px solid transparent;
+      -webkit-transition: 0.3s all;
+      -o-transition: 0.3s all;
       transition: 0.3s all;
+      &::-webkit-input-placeholder {
+        color: #6c7483;
+        font-size: 12px;
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 1.33;
+      }
+      &::-moz-placeholder {
+        color: #6c7483;
+        font-size: 12px;
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 1.33;
+      }
+      &:-ms-input-placeholder {
+        color: #6c7483;
+        font-size: 12px;
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 1.33;
+      }
+      &::-ms-input-placeholder {
+        color: #6c7483;
+        font-size: 12px;
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 1.33;
+      }
       &::placeholder {
         color: #6c7483;
         font-size: 12px;
@@ -202,13 +234,15 @@
         text-transform: uppercase;
         line-height: 1.33;
       }
-      &:focus{
+      &:focus {
         border-color: $primary2;
       }
     }
     button {
       position: absolute;
       top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
       transform: translateY(-50%);
       left: 15px;
       font-size: 18px;
@@ -225,14 +259,23 @@
   background-color: #e7f3fd;
   padding: 13px 0;
   ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     li {
       text-transform: uppercase;
       line-height: 1.4;
       font-weight: bold;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
       justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
       margin-right: 11px;
       a {
@@ -286,6 +329,7 @@
   padding: 13px 3px 3px 3px;
   background-color: $primary;
   border-radius: 12px;
+  position: -webkit-sticky;
   position: sticky;
   top: 100px;
   &__title {
@@ -298,10 +342,11 @@
   &__inner {
     background-color: $white;
     border-radius: 12px;
+    -webkit-box-shadow: 6px 6px 16px 0 rgba(0, 0, 0, 0.1);
     box-shadow: 6px 6px 16px 0 rgba(0, 0, 0, 0.1);
     ul {
       .items {
-        a{
+        a {
           padding: 20px 12px;
           display: inline-block;
         }
@@ -333,7 +378,16 @@
           color: #a2a2a2;
         }
         &.active {
+          -webkit-box-shadow: 6px 6px 16px 0 rgba(0, 0, 0, 0.16);
           box-shadow: 6px 6px 16px 0 rgba(0, 0, 0, 0.16);
+          background-image: -webkit-gradient(
+            linear,
+            left top,
+            right top,
+            from(#1886eb),
+            to(#4fcafc)
+          );
+          background-image: -o-linear-gradient(left, #1886eb, #4fcafc);
           background-image: linear-gradient(to right, #1886eb, #4fcafc);
           .items__title {
             color: $white;
@@ -351,8 +405,15 @@
 .medicine {
   border-radius: 10px;
   border: solid 1px #e5e5e5;
+  -webkit-transition: 0.3s all;
+  -o-transition: 0.3s all;
   transition: 0.3s all;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   height: 100%;
   &__top {
@@ -366,8 +427,14 @@
   }
   &__mid {
     min-height: 76px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     padding: 15px;
     background-color: transparent;
@@ -385,6 +452,7 @@
     background-color: #f8f8f8;
   }
   &:hover {
+    -webkit-box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.1);
     box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.1);
   }
 }
@@ -461,15 +529,23 @@
 .medicine-en {
   overflow: hidden;
   img {
+    -webkit-transition: 0.5s all;
+    -o-transition: 0.5s all;
     transition: 0.5s all;
     width: 100%;
     margin-bottom: 5px;
     &:hover {
+      -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
       transform: scale(1.1);
     }
   }
   &__mid {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     min-height: 50px;
     position: relative;
@@ -484,6 +560,8 @@
       text-transform: uppercase;
     }
     .overlay-bar {
+      -webkit-transition: 0.5s all;
+      -o-transition: 0.5s all;
       transition: 0.5s all;
       position: absolute;
       width: 4px;
@@ -599,6 +677,7 @@
           right: 0;
           width: 30px;
           -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
           transform: translateY(-50%);
           color: #1886eb;
         }
@@ -609,6 +688,7 @@
         left: 0;
         bottom: 0;
         -webkit-transition: 0.5s all;
+        -o-transition: 0.5s all;
         transition: 0.5s all;
         width: 0;
         background-size: cover;
@@ -653,21 +733,21 @@
         }
       }
     }
-    .swiper-pagination{
-      &.swiper-pagination-bullets{
+    .swiper-pagination {
+      &.swiper-pagination-bullets {
         bottom: 85px;
-        .swiper-pagination-bullet{
+        .swiper-pagination-bullet {
           margin: 0 10px;
           width: 15px;
           height: 15px;
           opacity: 1;
           border: 2px solid rgba(255, 255, 255, 0.2);
           background-color: transparent;
-          &-active{
+          &-active {
             border-color: transparent;
             background: $white;
           }
-          &:focus{
+          &:focus {
             outline: none;
           }
         }
@@ -696,6 +776,14 @@
       width: 100%;
       max-width: 230px;
       border: none;
+      background-image: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        from(#1886eb),
+        to(#4fcafc)
+      );
+      background-image: -o-linear-gradient(left, #1886eb 0%, #4fcafc 100%);
       background-image: linear-gradient(to right, #1886eb 0%, #4fcafc 100%);
       color: $white;
       i {
@@ -709,6 +797,7 @@
 .medal {
   overflow: hidden;
   color: $white;
+  background-image: -o-linear-gradient(11deg, #0b395c, #105baa 67%);
   background-image: linear-gradient(79deg, #0b395c, #105baa 67%);
   .row {
     .col-3 {
@@ -726,7 +815,11 @@
     }
   }
   .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     &__left {
       margin-right: 20px;

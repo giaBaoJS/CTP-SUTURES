@@ -83,9 +83,15 @@
         background-color: #f8f8f8;
         padding: 30px;
         .description {
+          -webkit-column-count: 2;
+          -moz-column-count: 2;
           column-count: 2;
+          -webkit-column-gap: 40px;
+          -moz-column-gap: 40px;
           column-gap: 40px;
           @include media(540px) {
+            -webkit-column-count: 1;
+            -moz-column-count: 1;
             column-count: 1;
           }
           .items {
@@ -122,11 +128,19 @@
       }
     }
     &__btn {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
       justify-content: space-between;
       .btn-main {
         width: 170px;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
         @include media(540px) {
           width: 120px;

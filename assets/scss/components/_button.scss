@@ -7,6 +7,8 @@
   height: 50px;
   display: none;
   border-radius: 35px;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
   z-index: 99;
   &:hover {
@@ -22,10 +24,14 @@
     margin: 0;
     position: relative;
     left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
     transform: translateX(-50%);
     top: 8px;
     font-size: 30px;
     font-weight: bold;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
   }
 }
@@ -35,7 +41,11 @@
   font-size: 12px;
   line-height: 1.33;
   text-transform: uppercase;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   border: 1px solid $primary2;
   letter-spacing: 0.3px;
@@ -45,6 +55,14 @@
     color: $primary2;
   }
   &:hover {
+    background-image: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(#1886eb),
+      to(#4fcafc)
+    );
+    background-image: -o-linear-gradient(left, #1886eb 0%, #4fcafc 100%);
     background-image: linear-gradient(to right, #1886eb 0%, #4fcafc 100%);
     color: $white;
     i {
