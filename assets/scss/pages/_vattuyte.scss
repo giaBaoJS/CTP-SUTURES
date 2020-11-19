@@ -19,7 +19,6 @@
       }
     }
     .content {
-      overflow: hidden;
       -webkit-transition: 0.4s all;
       -o-transition: 0.4s all;
       transition: 0.4s all;
@@ -34,12 +33,14 @@
       flex-direction: column;
       height: 100%;
       &__top {
+        overflow: hidden;
         border-radius: 12px;
         img {
           border-radius: 12px;
         }
       }
       &__mid {
+        flex-shrink: 0;
         background-color: $primary2;
         padding: 15px 30px;
         a {
@@ -62,7 +63,7 @@
         background-color: #f8f8f8;
         border-bottom-right-radius: 12px;
         border-bottom-left-radius: 12px;
-        height: 100%;
+        flex-grow: 1;
         .description {
           margin-bottom: 13px;
         }

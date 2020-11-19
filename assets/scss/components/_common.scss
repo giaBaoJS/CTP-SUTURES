@@ -348,7 +348,7 @@
       .items {
         a {
           padding: 20px 12px;
-          display: inline-block;
+          display: block;
         }
         font-weight: bold;
         &:first-child {
@@ -359,7 +359,6 @@
           border-bottom-left-radius: 12px;
           border-bottom-right-radius: 12px;
         }
-        cursor: pointer;
         text-align: center;
         border-bottom: 1px solid #e2e2e2;
         &:last-child {
@@ -419,7 +418,10 @@
   &__top {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    padding: 15px 35px;
+    a {
+      padding: 15px 35px;
+      display: block;
+    }
     img {
       width: 100%;
       height: auto;
@@ -438,6 +440,7 @@
     align-items: center;
     padding: 15px;
     background-color: transparent;
+    flex-shrink: 0;
     a {
       color: $white;
       font-weight: bold;
@@ -445,7 +448,7 @@
     }
   }
   &__bot {
-    height: 100%;
+    flex-grow: 1;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     padding: 15px;
@@ -528,6 +531,11 @@
 //List items for medicine - english
 .medicine-en {
   overflow: hidden;
+  &__top{
+    a{
+    display: block;
+    }
+  }
   img {
     -webkit-transition: 0.5s all;
     -o-transition: 0.5s all;

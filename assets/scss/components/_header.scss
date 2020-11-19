@@ -1,6 +1,8 @@
 .header {
   position: relative;
   z-index: 99;
+  -webkit-box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.16);
+  box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.16);
   &-fixed {
     .header__menu {
       position: fixed;
@@ -95,6 +97,13 @@
     &.--eng {
       background-color: #1e3461;
       color: $white;
+      .header__topbar-left {
+        p {
+          span {
+            font-weight: normal;
+          }
+        }
+      }
       .header__topbar-right {
         ul {
           li {
@@ -117,42 +126,9 @@
       }
     }
   }
-  &.home-eng {
-    position: fixed;
-    width: 100%;
-    .header__topbar {
-      background-color: rgba(30, 52, 97, 0.3);
-    }
-    .header__menu {
-      -webkit-box-shadow: unset;
-      box-shadow: unset;
-      background-color: transparent;
-      .main-header {
-        a {
-          color: $white;
-        }
-        .hamburger-btn {
-          .bar {
-            background-color: $white;
-            &::after,
-            &::before {
-              background-color: $white;
-            }
-          }
-        }
-        .main-logo {
-          img {
-            -webkit-filter: brightness(0) invert(1);
-            filter: brightness(0) invert(1);
-          }
-        }
-      }
-    }
-  }
+ 
   &__menu {
     background-color: $white;
-    -webkit-box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.16);
-    box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.16);
     .main-header {
       position: relative;
       @include media(1200px) {
@@ -170,6 +146,9 @@
         justify-content: space-between;
         position: relative;
         .main-logo {
+          .logo-eng{
+            display: none;
+           }
           img {
             width: 130px;
             height: auto;
@@ -526,6 +505,41 @@
                 display: block;
               }
             }
+          }
+        }
+      }
+    }
+  }
+  &.home-eng {
+    position: fixed;
+    width: 100%;
+    box-shadow: unset;
+    .header__topbar {
+      background-color: rgba(30, 52, 97, 0.3);
+    }
+    .header__menu {
+      -webkit-box-shadow: unset;
+      box-shadow: unset;
+      background-color: transparent;
+      .main-header {
+        a {
+          color: $white;
+        }
+        .hamburger-btn {
+          .bar {
+            background-color: $white;
+            &::after,
+            &::before {
+              background-color: $white;
+            }
+          }
+        }
+        .main-logo {
+         .logo-eng{
+           display: block;
+          }
+          .logo-all{
+            display: none;
           }
         }
       }

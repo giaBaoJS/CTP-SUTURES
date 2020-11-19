@@ -64,6 +64,11 @@
           border-color: $primary;
         }
       }
+      &.--eng {
+        .content__title {
+          font-size: 40px;
+        }
+      }
     }
   }
   &__bottom {

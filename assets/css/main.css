@@ -53,6 +53,11 @@ button {
   cursor: pointer;
 }
 
+@media only screen and (max-width: 768px) {
+  .wow {
+    animation-delay: 0s !important;
+  }
+}
 .container {
   width: 100%;
   height: auto;
@@ -98,6 +103,8 @@ button {
 .header {
   position: relative;
   z-index: 99;
+  -webkit-box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.16);
+  box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.16);
 }
 .header-fixed .header__menu {
   position: fixed;
@@ -191,6 +198,9 @@ button {
   background-color: #1e3461;
   color: #ffffff;
 }
+.header__topbar.--eng .header__topbar-left p span {
+  font-weight: normal;
+}
 .header__topbar.--eng .header__topbar-right ul li a {
   border-color: #ffffff;
   color: #ffffff;
@@ -205,35 +215,8 @@ button {
 .header__topbar.--eng .header__topbar-right ul li a:hover i {
   color: #1e3461;
 }
-.header.home-eng {
-  position: fixed;
-  width: 100%;
-}
-.header.home-eng .header__topbar {
-  background-color: rgba(30, 52, 97, 0.3);
-}
-.header.home-eng .header__menu {
-  -webkit-box-shadow: unset;
-  box-shadow: unset;
-  background-color: transparent;
-}
-.header.home-eng .header__menu .main-header a {
-  color: #ffffff;
-}
-.header.home-eng .header__menu .main-header .hamburger-btn .bar {
-  background-color: #ffffff;
-}
-.header.home-eng .header__menu .main-header .hamburger-btn .bar::after, .header.home-eng .header__menu .main-header .hamburger-btn .bar::before {
-  background-color: #ffffff;
-}
-.header.home-eng .header__menu .main-header .main-logo img {
-  -webkit-filter: brightness(0) invert(1);
-  filter: brightness(0) invert(1);
-}
 .header__menu {
   background-color: #ffffff;
-  -webkit-box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.16);
-  box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.16);
 }
 .header__menu .main-header {
   position: relative;
@@ -254,6 +237,9 @@ button {
   -ms-flex-pack: justify;
   justify-content: space-between;
   position: relative;
+}
+.header__menu .main-header .isner .main-logo .logo-eng {
+  display: none;
 }
 .header__menu .main-header .isner .main-logo img {
   width: 130px;
@@ -614,6 +600,34 @@ button {
     display: block;
   }
 }
+.header.home-eng {
+  position: fixed;
+  width: 100%;
+  box-shadow: unset;
+}
+.header.home-eng .header__topbar {
+  background-color: rgba(30, 52, 97, 0.3);
+}
+.header.home-eng .header__menu {
+  -webkit-box-shadow: unset;
+  box-shadow: unset;
+  background-color: transparent;
+}
+.header.home-eng .header__menu .main-header a {
+  color: #ffffff;
+}
+.header.home-eng .header__menu .main-header .hamburger-btn .bar {
+  background-color: #ffffff;
+}
+.header.home-eng .header__menu .main-header .hamburger-btn .bar::after, .header.home-eng .header__menu .main-header .hamburger-btn .bar::before {
+  background-color: #ffffff;
+}
+.header.home-eng .header__menu .main-header .main-logo .logo-eng {
+  display: block;
+}
+.header.home-eng .header__menu .main-header .main-logo .logo-all {
+  display: none;
+}
 
 .mona-content strong,
 .mona-content b {
@@ -950,13 +964,12 @@ button {
 }
 .danhmuc-main__inner ul .items {
   font-weight: bold;
-  cursor: pointer;
   text-align: center;
   border-bottom: 1px solid #e2e2e2;
 }
 .danhmuc-main__inner ul .items a {
   padding: 20px 12px;
-  display: inline-block;
+  display: block;
 }
 .danhmuc-main__inner ul .items:first-child {
   border-top-left-radius: 12px;
@@ -1012,7 +1025,10 @@ button {
 .medicine__top {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+}
+.medicine__top a {
   padding: 15px 35px;
+  display: block;
 }
 .medicine__top img {
   width: 100%;
@@ -1031,6 +1047,7 @@ button {
   align-items: center;
   padding: 15px;
   background-color: transparent;
+  flex-shrink: 0;
 }
 .medicine__mid a {
   color: #ffffff;
@@ -1038,7 +1055,7 @@ button {
   text-transform: uppercase;
 }
 .medicine__bot {
-  height: 100%;
+  flex-grow: 1;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   padding: 15px;
@@ -1120,6 +1137,9 @@ button {
 
 .medicine-en {
   overflow: hidden;
+}
+.medicine-en__top a {
+  display: block;
 }
 .medicine-en img {
   -webkit-transition: 0.5s all;
@@ -1629,6 +1649,9 @@ button {
   background-color: #ffffff;
   color: #105BAA;
   border-color: #105BAA;
+}
+.footer__top .content.--eng .content__title {
+  font-size: 40px;
 }
 .footer__bottom {
   background-color: #15223a;
@@ -2391,7 +2414,6 @@ button {
   }
 }
 .wrapper-vattuyte .vattuyte__items .content {
-  overflow: hidden;
   -webkit-transition: 0.4s all;
   -o-transition: 0.4s all;
   transition: 0.4s all;
@@ -2407,12 +2429,14 @@ button {
   height: 100%;
 }
 .wrapper-vattuyte .vattuyte__items .content__top {
+  overflow: hidden;
   border-radius: 12px;
 }
 .wrapper-vattuyte .vattuyte__items .content__top img {
   border-radius: 12px;
 }
 .wrapper-vattuyte .vattuyte__items .content__mid {
+  flex-shrink: 0;
   background-color: #1886EB;
   padding: 15px 30px;
 }
@@ -2435,7 +2459,7 @@ button {
   background-color: #f8f8f8;
   border-bottom-right-radius: 12px;
   border-bottom-left-radius: 12px;
-  height: 100%;
+  flex-grow: 1;
 }
 .wrapper-vattuyte .vattuyte__items .content__bot .description {
   margin-bottom: 13px;
