@@ -1,25 +1,28 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 html,
 body {
-  font-family: 'SF Pro Text','sans-serif';
+  font-family: 'SF Pro Text', 'sans-serif';
   font-size: 14px;
   line-height: 1.7;
 }
 a {
   text-decoration: none;
   color: $black;
+  -webkit-transition: 0.3s all;
+  -o-transition: 0.3s all;
   transition: 0.3s all;
-
 }
 ol,
 ul {
   list-style: none;
 }
-input:focus,textarea:focus,
+input:focus,
+textarea:focus,
 button {
   outline: none;
 }
@@ -39,6 +42,6 @@ textarea {
   font-size: inherit;
   font-family: inherit;
 }
-button{
+button {
   cursor: pointer;
 }
