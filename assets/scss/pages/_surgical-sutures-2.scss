@@ -1,117 +1,99 @@
-.wrapper-surgical-2 {
+.surgical-2__main {
   overflow: hidden;
-  .surgical-2__main {
-    overflow: hidden;
-    .top {
-      .title-cm {
+  
+}
+.surgical-2__top {
+  .title-cm {
+    font-weight: bold;
+    margin-bottom: 48px;
+    color: #801780;
+  }
+}
+.surgical__instruction {
+  position: relative;
+  z-index: 10;
+  .title-cm {
+    margin-bottom: 37px;
+  }
+  .description {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 30px;
+    -moz-column-gap: 30px;
+    column-gap: 30px;
+    @include media(540px) {
+      -webkit-column-count: 1;
+      -moz-column-count: 1;
+      column-count: 1;
+    }
+    .items {
+      margin-bottom: 38px;
+      strong {
+        text-transform: uppercase;
+      }
+      span {
         font-weight: bold;
-        margin-bottom: 48px;
         color: #801780;
       }
+      .nav-cm {
+        li {
+          font-size: 14px;
+        }
+      }
     }
-    .detail__listInfo {
+  }
+}
+.surgical__twocolumn {
+  .row {
+    .col-6 {
+      width: 50%;
       position: relative;
-      padding-top: 0;
-      .title-cm {
-        margin-bottom: 30px;
-      }
-      background-color: unset;
-      .image-ol {
-        position: absolute;
-        top: -300px;
-        left: -1090px;
-        @include media(1023px) {
-          display: none;
-        }
+      @include media(1023px) {
+        width: 100%;
       }
     }
-    .surgical__instruction {
-      position: relative;
-      z-index: 10;
-      .title-cm {
-        margin-bottom: 37px;
-      }
-      .description {
-        -webkit-column-count: 2;
-        -moz-column-count: 2;
-        column-count: 2;
-        -webkit-column-gap: 30px;
-        -moz-column-gap: 30px;
-        column-gap: 30px;
-        @include media(540px) {
-          -webkit-column-count: 1;
-          -moz-column-count: 1;
-          column-count: 1;
-        }
-        .items {
-          margin-bottom: 38px;
-          strong {
-            text-transform: uppercase;
-          }
-          span {
-            font-weight: bold;
-            color: #801780;
-          }
-          .nav-cm {
-            li {
-              font-size: 14px;
-            }
+  }
+  .content {
+    position: relative;
+    z-index: 10;
+    -webkit-box-shadow: 10px 10px 30px 0 rgba(0, 0, 0, 0.16);
+    box-shadow: 10px 10px 30px 0 rgba(0, 0, 0, 0.16);
+    background-color: $primary;
+    color: $white;
+    padding: 70px;
+    @include media(540px) {
+      padding: 30px 15px;
+    }
+    .title-cm {
+      margin-bottom: 23px;
+    }
+    .nav-cm {
+      li {
+        font-weight: bold;
+        &:not(:last-child) {
+          margin-bottom: 35px;
+          @include media(540px) {
+            margin-bottom: 25px;
           }
         }
       }
     }
-    .surgical__twocolumn {
-      .row {
-        .col-6 {
-          width: 50%;
-          position: relative;
-          @include media(1023px) {
-            width: 100%;
-          }
-        }
-      }
-      .content {
-        position: relative;
-        z-index: 10;
-        -webkit-box-shadow: 10px 10px 30px 0 rgba(0, 0, 0, 0.16);
-        box-shadow: 10px 10px 30px 0 rgba(0, 0, 0, 0.16);
-        background-color: $primary;
-        color: $white;
-        padding: 70px;
-        @include media(540px) {
-          padding: 30px 15px;
-        }
-        .title-cm {
-          margin-bottom: 23px;
-        }
-        .nav-cm {
-          li {
-            font-weight: bold;
-            &:not(:last-child) {
-              margin-bottom: 35px;
-              @include media(540px) {
-                margin-bottom: 25px;
-              }
-            }
-          }
-        }
-      }
-      .img-ol {
-        position: absolute;
-        right: -326px;
-        top: -154px;
-        @include media(1023px) {
-          display: none;
-        }
-        .img {
-          width: 100%;
-        }
-      }
+  }
+  .img-ol {
+    position: absolute;
+    right: -326px;
+    top: -154px;
+    @include media(1023px) {
+      display: none;
     }
-    .surgical__table {
-      .title-cm {
-        margin-bottom: 30px;
-      }
+    .img {
+      width: 100%;
     }
+  }
+}
+.surgical__table {
+  .title-cm {
+    margin-bottom: 30px;
   }
 }

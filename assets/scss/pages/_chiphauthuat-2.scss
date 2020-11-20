@@ -1,117 +1,103 @@
-.wrapper-chiphauthuat-2 {
-  .chiphauthuat-2__detail {
-    .detail__top {
-      padding-top: 45px;
-      padding-bottom: 22px;
-      color: $primary;
-      .title-cm {
-        margin-bottom: 27px;
-      }
-      .subtitle {
-        font-size: 24px;
-        line-height: 1;
-        font-weight: normal;
-      }
+.detailz__top {
+  padding-top: 45px;
+  padding-bottom: 22px;
+  color: $primary;
+  .title-cm {
+    margin-bottom: 27px;
+  }
+  .subtitle {
+    font-size: 24px;
+    line-height: 1;
+    font-weight: normal;
+  }
+}
+.detailz__huongdan {
+  background-color: #800f80;
+  padding-top: 57px;
+  padding-bottom: 22px;
+  color: $white;
+  .title {
+    font-size: 24px;
+    font-weight: normal;
+  }
+}
+.detailz__information {
+  background-color: #f8f8f8;
+  position: relative;
+  overflow: hidden;
+  .description {
+    position: relative;
+    z-index: 10;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 50px;
+    -moz-column-gap: 50px;
+    column-gap: 50px;
+    @include media(540px) {
+      -webkit-column-count: 1;
+      -moz-column-count: 1;
+      column-count: 1;
     }
-    .detail__huongdan {
-      background-color: #800f80;
-      padding-top: 57px;
-      padding-bottom: 22px;
-      color: $white;
-      .title {
-        font-size: 24px;
-        font-weight: normal;
-      }
-    }
-    .detail__information {
-      padding: 50px 0;
-      background-color: #f8f8f8;
-      position: relative;
-      overflow: hidden;
-      .description {
-        position: relative;
-        z-index: 10;
-        -webkit-column-count: 2;
-        -moz-column-count: 2;
-        column-count: 2;
-        -webkit-column-gap: 50px;
-        -moz-column-gap: 50px;
-        column-gap: 50px;
-        @include media(540px) {
-          -webkit-column-count: 1;
-          -moz-column-count: 1;
-          column-count: 1;
-        }
-        .items {
-          margin-bottom: 30px;
-          @include media(540px) {
-            &:last-child {
-              margin-bottom: 0;
-            }
-          }
-          strong {
-            text-transform: uppercase;
-          }
-          p {
-            margin: 0;
-          }
-          span {
-            color: #800f80;
-            font-weight: bold;
-          }
-          ul {
-            list-style: none;
-            li {
-              position: relative;
-              padding-left: 20px;
-              &::before {
-                content: '';
-                position: absolute;
-                top: 6px;
-                left: 0;
-                width: 8px;
-                height: 8px;
-                background-color: #800f80;
-              }
-            }
-          }
+    .items {
+      margin-bottom: 30px;
+      @include media(540px) {
+        &:last-child {
+          margin-bottom: 0;
         }
       }
-      .image-ol {
-        mix-blend-mode: multiply;
-        position: absolute;
-        top: 0;
-        right: 0;
-        @include media(1023px) {
-          display: none;
+      strong {
+        text-transform: uppercase;
+      }
+      p {
+        margin: 0;
+      }
+      span {
+        color: #800f80;
+        font-weight: bold;
+      }
+    }
+    .nav-cm {
+      li {
+       font-size: 14px;
+        &::before {
+          background-color: #800f80;
         }
       }
     }
-    .detail__certification {
-      padding: 62px 0;
-      text-align: center;
-      background-color: $primary;
-      color: $white;
-      -webkit-box-shadow: 10px 10px 30px 0 rgba(0, 0, 0, 0.16);
-      box-shadow: 10px 10px 30px 0 rgba(0, 0, 0, 0.16);
-      .content {
-        .title-cm {
-          margin-bottom: 18px;
-        }
-        .description {
-          font-weight: bold;
-          font-size: 18px;
-        }
-      }
+  }
+  .image-ol {
+    mix-blend-mode: multiply;
+    position: absolute;
+    top: 0;
+    right: 0;
+    @include media(1023px) {
+      display: none;
     }
-    .detail__danhmuc {
-      padding: 60px 0;
-      .title {
-        margin-bottom: 20px;
-        font-size: 24px;
-        line-height: 1;
-        font-weight: normal;
-      }
+  }
+}
+.detailz__certification {
+  padding: 62px 0;
+  text-align: center;
+  background-color: $primary;
+  color: $white;
+  -webkit-box-shadow: 10px 10px 30px 0 rgba(0, 0, 0, 0.16);
+  box-shadow: 10px 10px 30px 0 rgba(0, 0, 0, 0.16);
+  .content {
+    .title-cm {
+      margin-bottom: 18px;
     }
+    .description {
+      font-weight: bold;
+      font-size: 18px;
+    }
+  }
+}
+.detailz__danhmuc {
+  .title {
+    margin-bottom: 20px;
+    font-size: 24px;
+    line-height: 1;
+    font-weight: normal;
   }
 }

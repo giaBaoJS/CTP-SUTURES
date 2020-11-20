@@ -1,150 +1,149 @@
-.wrapper-vattuyte {
-  .vattuyte__items {
-    padding: 80px 0;
-    .title-cm {
-      margin-bottom: 20px;
-    }
-    .row {
-      .col-4 {
-        width: calc(100% / 12 * 4);
-        &:nth-child(n+4) {
+.vattuyte__items {
+  padding: 80px 0;
+  .title-cm {
+    margin-bottom: 20px;
+  }
+  .row {
+    .col-4 {
+      width: calc(100% / 12 * 4);
+      &:nth-child(n + 4) {
+        margin-top: 30px;
+      }
+      @include media(768px) {
+        width: 50%;
+        &:nth-child(n + 3) {
           margin-top: 30px;
         }
-        @include media(768px) {
-          width: 50%;
-          &:nth-child(n+3){
-            margin-top: 30px;
-          }
-        }
-        @include media(540px) {
-          width: 100%;
-          &:nth-child(n+2){
-            margin-top: 30px;
-          }
+      }
+      @include media(540px) {
+        width: 100%;
+        &:nth-child(n + 2) {
+          margin-top: 30px;
         }
       }
     }
-    .content {
-      -webkit-transition: 0.4s all;
-      -o-transition: 0.4s all;
-      transition: 0.4s all;
+  }
+}
+.vt-content {
+  -webkit-transition: 0.4s all;
+  -o-transition: 0.4s all;
+  transition: 0.4s all;
+  border-radius: 12px;
+  border: solid 1px #e5e5e5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+  &__top {
+    overflow: hidden;
+    border-radius: 12px;
+    img {
       border-radius: 12px;
-      border: solid 1px #e5e5e5;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      height: 100%;
-      &__top {
-        overflow: hidden;
-        border-radius: 12px;
+    }
+  }
+  &__mid {
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    background-color: $primary2;
+    padding: 15px 30px;
+    a {
+      color: $white;
+    }
+    .title {
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 1.25;
+      margin-bottom: 5px;
+    }
+    .sub-title {
+      font-size: 12px;
+      font-weight: bold;
+    }
+  }
+  &__bot {
+    font-weight: 300;
+    padding: 30px;
+    background-color: #f8f8f8;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    .description {
+      margin-bottom: 13px;
+    }
+    a {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: bold;
+      &:hover {
+        color: $primary2;
+      }
+    }
+  }
+  &:hover {
+    -webkit-box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.1);
+    box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.1);
+  }
+  &.--eng {
+    border-radius: 0;
+    border: none;
+    &:hover {
+      -webkit-box-shadow: none;
+      box-shadow: none;
+    }
+    .vt-content__top {
+      img {
+        -webkit-transition: 0.4s all;
+        -o-transition: 0.4s all;
+        transition: 0.4s all;
+      }
+      &:hover {
         img {
-          border-radius: 12px;
+          -webkit-transform: scale(1.2);
+          -ms-transform: scale(1.2);
+          transform: scale(1.2);
         }
       }
-      &__mid {
-        flex-shrink: 0;
+    }
+    .vt-content__mid {
+      margin-bottom: 13px;
+      position: relative;
+      background-color: unset;
+      padding: 7px 12px;
+      a {
+        color: $black;
+        position: relative;
+        z-index: 10;
+      }
+      .overlay-bar {
+        -webkit-transition: 0.5s all;
+        -o-transition: 0.5s all;
+        transition: 0.5s all;
+        position: absolute;
+        width: 4px;
+        height: 100%;
+        left: 0;
+        top: 0;
         background-color: $primary2;
-        padding: 15px 30px;
+      }
+      &:hover {
         a {
           color: $white;
         }
-        .title {
-          font-size: 16px;
-          font-weight: bold;
-          line-height: 1.25;
-          margin-bottom: 5px;
+        .overlay-bar {
+          width: 100%;
         }
-        .sub-title {
-          font-size: 12px;
-          font-weight: bold;
-        }
-      }
-      &__bot {
-        font-weight: 300;
-        padding: 30px;
-        background-color: #f8f8f8;
-        border-bottom-right-radius: 12px;
-        border-bottom-left-radius: 12px;
-        flex-grow: 1;
-        .description {
-          margin-bottom: 13px;
-        }
-        a {
-          display: inline-block;
-          font-size: 12px;
-          font-weight: bold;
-          &:hover {
-            color: $primary2;
-          }
-        }
-      }
-      &:hover {
-        -webkit-box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.1);
-        box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.1);
       }
     }
-    &.--eng {
-      .content {
-        border-radius: 0;
-        border: none;
-        &:hover {
-          -webkit-box-shadow: none;
-          box-shadow: none;
-        }
-        &__top {
-          img {
-            -webkit-transition: 0.4s all;
-            -o-transition: 0.4s all;
-            transition: 0.4s all;
-          }
-          &:hover {
-            img {
-              -webkit-transform: scale(1.2);
-              -ms-transform: scale(1.2);
-              transform: scale(1.2);
-            }
-          }
-        }
-        &__mid {
-          margin-bottom: 13px;
-          position: relative;
-          background-color: unset;
-          padding: 7px 12px;
-          a {
-            color: $black;
-            position: relative;
-            z-index: 10;
-          }
-          .overlay-bar {
-            -webkit-transition: 0.5s all;
-            -o-transition: 0.5s all;
-            transition: 0.5s all;
-            position: absolute;
-            width: 4px;
-            height: 100%;
-            left: 0;
-            top: 0;
-            background-color: $primary2;
-          }
-          &:hover {
-            a {
-              color: $white;
-            }
-            .overlay-bar {
-              width: 100%;
-            }
-          }
-        }
-        &__bot {
-          font-size: 12px;
-          background-color: unset;
-          padding: 0;
-        }
-      }
+    .vt-content__bot {
+      font-size: 12px;
+      background-color: unset;
+      padding: 0;
     }
   }
 }
