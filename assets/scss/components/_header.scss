@@ -128,7 +128,7 @@
       }
     }
   }
- 
+
   &__menu {
     background-color: $white;
     .main-header {
@@ -148,9 +148,9 @@
         justify-content: space-between;
         position: relative;
         .main-logo {
-          .logo-eng{
+          .logo-eng {
             display: none;
-           }
+          }
           img {
             width: 130px;
             height: auto;
@@ -444,9 +444,9 @@
                   .submenu {
                     top: 0;
                     left: 100%;
-                    &.s-rev{
+                    &.s-rev {
                       left: unset;
-                      right:100%;
+                      right: 100%;
                     }
                     li {
                       &:hover {
@@ -517,7 +517,7 @@
     }
   }
   &.home-eng {
-    position: fixed;
+    position: absolute;
     width: 100%;
     box-shadow: unset;
     .header__topbar {
@@ -539,12 +539,17 @@
               background-color: $white;
             }
           }
+          &.active {
+            .bar {
+              background-color: transparent;
+            }
+          }
         }
         .main-logo {
-         .logo-eng{
-           display: block;
+          .logo-eng {
+            display: block;
           }
-          .logo-all{
+          .logo-all {
             display: none;
           }
         }

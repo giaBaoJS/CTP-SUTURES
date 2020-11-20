@@ -131,7 +131,6 @@ $(window).bind('scroll', function () {
   });
 });
 
-
 //Check submenu
 $('.submenu').each(function () {
   var windowWidth = $(window).width();
