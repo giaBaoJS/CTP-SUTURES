@@ -530,8 +530,8 @@
 }
 //List items for medicine - english
 .medicine-en {
-  overflow: hidden;
   &__top{
+    overflow: hidden;
     a{
     display: block;
     }
@@ -703,6 +703,18 @@
         background-position: center center;
         -webkit-box-shadow: 6px 6px 16px rgba(0, 0, 0, 0.16);
         box-shadow: 6px 6px 16px rgba(0, 0, 0, 0.16);
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 0;
+          height: 100%;
+          width: 100%;
+          background-image: linear-gradient(to right, #1886eb 0%, #4fcafc 100%);
+          mix-blend-mode: multiply;
+          opacity: 0.9;
+        }
       }
       &:hover {
         .image-overlay {

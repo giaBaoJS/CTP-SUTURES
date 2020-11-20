@@ -5,6 +5,8 @@
   box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.16);
   &-fixed {
     .header__menu {
+      -webkit-box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.16);
+      box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.16);
       position: fixed;
       width: 100%;
       top: 0;
@@ -442,6 +444,10 @@
                   .submenu {
                     top: 0;
                     left: 100%;
+                    &.s-rev{
+                      left: unset;
+                      right:100%;
+                    }
                     li {
                       &:hover {
                         background-color: $white;

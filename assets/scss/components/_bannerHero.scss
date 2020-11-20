@@ -4,7 +4,21 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    height: 100%;
+    width: 100%;
+    background-color: $black;
+    opacity: 0.3;
+  }
   &__title {
+    position: relative;
+    z-index: 10;
     font-size: 60px;
     line-height: 1.33;
     span {

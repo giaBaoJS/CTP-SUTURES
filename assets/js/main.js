@@ -130,3 +130,17 @@ $(window).bind('scroll', function () {
     }
   });
 });
+
+
+//Check submenu
+$('.submenu').each(function () {
+  var windowWidth = $(window).width();
+  var subOffset = $(this).offset().left;
+  var subWidth = $(this).width();
+  var rightOfSub = subOffset + subWidth;
+  if (rightOfSub > windowWidth) {
+    $(this).addClass('s-rev');
+  }
+});
+
+
